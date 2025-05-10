@@ -5,7 +5,7 @@ import subprocess
 import time
 
 print("🔧 시작: 환경 변수 확인")
-model_id = "MLP-KTLim/llama-3-Korean-Bllossom-8B"
+model_id = "mistralai/Mistral-7B-Instruct-v0.1"
 hf_token = os.getenv("HF_TOKEN")
 
 if hf_token:
