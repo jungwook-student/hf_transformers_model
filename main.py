@@ -24,19 +24,17 @@ model = AutoModelForCausalLM.from_pretrained(
     model_id,
     token=hf_token,
     torch_dtype=torch.float16,
-    device_map="auto"  # ✅ 멀티-GPU 자동 분산
+    device_map="auto"  # 멀티 GPU 자동 분산
 )
 
-# LoRA 설정
-peft_config = LoraConfig(
+model = get_peft_model(model, LoraConfig(
     r=8,
     lora_alpha=32,
     task_type=TaskType.CAUSAL_LM,
     lora_dropout=0.05,
     bias="none"
-)
-model = get_peft_model(model, peft_config)
-model.config.use_cache = False  # ✅ Trainer 호환성 위해 캐시 비활성화
+))
+model.config.use_cache = False  # Trainer compatibility
 
 # 데이터셋 로딩 및 전처리
 print("📚 데이터셋 로딩 및 전처리 중...")
@@ -48,7 +46,6 @@ def format(example):
 
 dataset = dataset.map(format)
 
-# 토큰화
 tokenized = dataset.map(
     lambda x: tokenizer(x["text"], truncation=True, padding="max_length", max_length=512),
     batched=True,
@@ -66,7 +63,8 @@ training_args = TrainingArguments(
     save_strategy="no",
     fp16=True,
     remove_unused_columns=False,
-    report_to="none"
+    report_to="none",
+    ddp_find_unused_parameters=False  # 🔥 device_map="auto" 사용 시 필수
 )
 
 data_collator = DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm=False)
@@ -84,7 +82,7 @@ print("🚀 학습 시작...")
 trainer.train()
 print("✅ 학습 완료!")
 
-# 추론 테스트
+# 간단한 추론 테스트
 print("🔍 추론 테스트 시작...")
 pipe = pipeline("text-generation", model=model, tokenizer=tokenizer, device=0)
 
