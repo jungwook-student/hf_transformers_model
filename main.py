@@ -1,12 +1,15 @@
 
 import torch
-from transformers import AutoTokenizer, AutoModelForCausalLM, Trainer, TrainingArguments
+from transformers import AutoTokenizer, AutoModelForCausalLM, Trainer, TrainingArguments, DataCollatorForLanguageModeling
+from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
 from datasets import load_dataset
-from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training, PeftModel
 from transformers import BitsAndBytesConfig
+import os
 
+# Logging
 print("📦 모델 및 토크나이저 로딩 중...")
 
+model_id = "mistralai/Mistral-7B-Instruct-v0.3"
 bnb_config = BitsAndBytesConfig(
     load_in_4bit=True,
     bnb_4bit_compute_dtype=torch.float16,
@@ -15,55 +18,56 @@ bnb_config = BitsAndBytesConfig(
 )
 
 model = AutoModelForCausalLM.from_pretrained(
-    "mistralai/Mistral-7B-Instruct-v0.3",
-    device_map="auto",
+    model_id,
     quantization_config=bnb_config,
-    trust_remote_code=True
+    device_map="auto"
 )
-tokenizer = AutoTokenizer.from_pretrained("mistralai/Mistral-7B-Instruct-v0.3", trust_remote_code=True)
-tokenizer.pad_token = tokenizer.eos_token
+
+tokenizer = AutoTokenizer.from_pretrained(model_id)
+if tokenizer.pad_token is None:
+    tokenizer.pad_token = tokenizer.eos_token
+
+model = prepare_model_for_kbit_training(model)
+
+peft_config = LoraConfig(
+    r=8,
+    lora_alpha=16,
+    target_modules=["q_proj", "k_proj", "v_proj", "o_proj"],
+    lora_dropout=0.05,
+    bias="none",
+    task_type="CAUSAL_LM",
+)
+
+model = get_peft_model(model, peft_config)
+model.print_trainable_parameters()
+model = model.to("cuda")
 
 print("✅ 모델 로딩 완료")
-print("📚 데이터셋 로딩 및 전처리 중...")
 
+# Load dataset
+print("📚 데이터셋 로딩 및 전처리 중...")
 dataset = load_dataset("json", data_files="data/instruction_data_500.jsonl")["train"]
 
 def generate_prompt(example):
     return f"### Instruction:\n{example['instruction']}\n\n### Input:\n{example['input']}\n\n### Output:\n{example['output']}"
 
 dataset = dataset.map(lambda x: {"text": generate_prompt(x)})
-def tokenize_function(examples):
-    outputs = tokenizer(
-        examples["text"],
-        padding="max_length",
-        truncation=True,
-        max_length=512,
-    )
-    outputs["labels"] = outputs["input_ids"].copy()
-    return outputs
+dataset = dataset.map(lambda x: tokenizer(x["text"], truncation=True, padding="max_length", max_length=512), batched=True)
+dataset.set_format(type="torch", columns=["input_ids", "attention_mask"])
 
-dataset = dataset.map(tokenize_function, batched=True)
-
-peft_config = LoraConfig(
-    r=8,
-    lora_alpha=16,
-    lora_dropout=0.05,
-    bias="none",
-    task_type="CAUSAL_LM"
-)
-
-model.gradient_checkpointing_enable()
-model = prepare_model_for_kbit_training(model)
-model = get_peft_model(model, peft_config)
-
+# Training
 training_args = TrainingArguments(
-    output_dir="outputs",
-    num_train_epochs=1,
+    output_dir="output",
     per_device_train_batch_size=1,
-    logging_steps=1,
-    save_strategy="no",
+    num_train_epochs=1,
     learning_rate=2e-4,
+    logging_steps=10,
+    save_total_limit=1,
+    save_strategy="no",
+    report_to="none",
     fp16=True,
+    gradient_checkpointing=True,
+    ddp_find_unused_parameters=False
 )
 
 trainer = Trainer(
@@ -71,35 +75,31 @@ trainer = Trainer(
     args=training_args,
     train_dataset=dataset,
     tokenizer=tokenizer,
+    data_collator=DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm=False),
 )
 
 print("🚀 학습 시작...")
 trainer.train()
+print("✅ 학습 완료")
 
-print("✅ 학습 완료 - 예제 문장 추론 테스트")
-
-# 사후 추론 예제 문장 테스트
-example_prompts = [
-    "첫 등원에 읽기 좋은 놀이책을 찾고 있어요.",
+# 테스트용 예제
+print("\n🧪 예제 문장 테스트:")
+test_examples = [
     "동물을 배울 수 있는 책 있으면 알려주세요.",
-    "놀이책 중에서 4-6세세가 좋아할 만한 책 있을까요?",
-    "2-4세세 아이랑 읽기 좋은 자연 책 추천해 주세요.",
-    "감정을 배울 수 있는 책이 있으면 추천해주세요."
+    "4~6세가 좋아할만한 놀이책 추천해줘.",
+    "자연을 주제로 한 책이 필요해.",
+    "첫 등원에 읽기 좋은 책을 찾고 있어.",
+    "2-4세 아이와 함께 볼 수 있는 책이 있을까?"
 ]
 
 model.eval()
-model.config.use_cache = True
-
-for prompt in example_prompts:
-    full_prompt = f"### Instruction:\n다음 문장을 분석하여 도서 추천 조건을 추출하세요.\n\n### Input:\n{prompt}\n\n### Output:"
-    inputs = tokenizer(full_prompt, return_tensors="pt").to("cuda")
+for prompt in test_examples:
+    input_text = f"### Instruction:\n다음 문장을 분석하여 도서 추천 조건을 추출하세요.\n\n### Input:\n{prompt}\n\n### Output:\n"
+    input_ids = tokenizer(input_text, return_tensors="pt").input_ids.to("cuda")
     with torch.no_grad():
-        outputs = model.generate(**inputs, max_new_tokens=100)
-    print(f"🔹 입력 문장: {prompt}")
-    print(tokenizer.decode(outputs[0], skip_special_tokens=True))
-    print("------")
+        output = model.generate(input_ids, max_new_tokens=100)
+    decoded = tokenizer.decode(output[0], skip_special_tokens=True)
+    print(f"📝 입력: {prompt}\n🔍 출력: {decoded}\n")
 
-# SSH를 통한 접근을 위해 무한 루프로 종료 방지
-print("⏳ 학습이 끝났습니다. SSH 접속을 위한 대기 상태입니다...")
-while True:
-    pass
+# 종료 방지
+input("🔒 학습이 완료되었습니다. 작업 공간을 종료하지 않으려면 이 창을 열어두세요. 종료하려면 Enter 키를 누르세요.")
