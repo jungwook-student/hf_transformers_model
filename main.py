@@ -1,4 +1,5 @@
 import os
+import torch
 from datasets import load_dataset
 from transformers import (
     AutoTokenizer,
@@ -13,8 +14,9 @@ from peft import get_peft_model, LoraConfig, TaskType
 # 환경 변수
 model_id = "mistralai/Mistral-7B-Instruct-v0.3"
 hf_token = os.environ["HF_TOKEN"]
+target_device = "cuda:0" if torch.cuda.is_available() else "cpu"
 
-# 모델 & 토크나이저 로딩
+# 모델 및 토크나이저 로딩
 print("📦 모델 및 토크나이저 로딩 중...")
 tokenizer = AutoTokenizer.from_pretrained(model_id, token=hf_token, trust_remote_code=True)
 tokenizer.pad_token = tokenizer.eos_token
@@ -22,9 +24,9 @@ tokenizer.pad_token = tokenizer.eos_token
 model = AutoModelForCausalLM.from_pretrained(
     model_id,
     token=hf_token,
-    device_map="auto",
-    torch_dtype="auto"
-)
+    torch_dtype=torch.float16,
+    device_map=None
+).to(target_device)
 
 # LoRA 설정
 peft_config = LoraConfig(
@@ -34,9 +36,9 @@ peft_config = LoraConfig(
     lora_dropout=0.05,
     bias="none"
 )
-model = get_peft_model(model, peft_config)
+model = get_peft_model(model, peft_config).to(target_device)
 
-# 데이터셋 로딩 및 포맷 변환
+# 데이터셋 로딩 및 포맷
 print("📚 데이터셋 로딩 및 전처리 중...")
 dataset = load_dataset("json", data_files={"train": "data/instruction_data_500.jsonl"})["train"]
 
