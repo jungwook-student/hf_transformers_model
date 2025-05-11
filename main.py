@@ -1,66 +1,61 @@
+
 import os
 import torch
 from datasets import load_dataset
-from transformers import AutoTokenizer, AutoModelForCausalLM, Trainer, TrainingArguments
+from transformers import AutoTokenizer, AutoModelForCausalLM, TrainingArguments, Trainer
 from peft import LoraConfig, get_peft_model, TaskType
 
-# 환경 변수
-model_id = "mistralai/Mistral-7B-Instruct-v0.3"
-dataset_path = "data/instruction_data_500.jsonl"
-output_dir = "./outputs"
+print("📦 모델 및 토크나이저 로딩 중...")
 
-# 토크나이저 및 모델 로딩
+model_id = "mistralai/Mistral-7B-Instruct-v0.3"
 tokenizer = AutoTokenizer.from_pretrained(model_id, use_fast=True)
-tokenizer.pad_token = tokenizer.eos_token
 model = AutoModelForCausalLM.from_pretrained(
     model_id,
-    device_map={"": 0},  # 모든 연산을 GPU 0에서 수행
-    torch_dtype=torch.float16
+    torch_dtype=torch.float16,
+    device_map="auto"
 )
 
-# LoRA 설정
-peft_config = LoraConfig(
-    task_type=TaskType.CAUSAL_LM,
-    r=8,
-    lora_alpha=32,
-    lora_dropout=0.1,
-    bias="none"
-)
-model = get_peft_model(model, peft_config)
-
-# 데이터셋 로딩 및 전처리
-dataset = load_dataset("json", data_files=dataset_path, split="train")
+print("✅ 모델 로딩 완료")
+print("📚 데이터셋 로딩 및 전처리 중...")
 
 def generate_prompt(example):
     return f"### Instruction:\n{example['instruction']}\n\n### Input:\n{example['input']}\n\n### Output:\n{example['output']}"
 
+dataset = load_dataset("json", data_files="data/instruction_data_500.jsonl")["train"]
 dataset = dataset.map(lambda x: {"text": generate_prompt(x)})
-tokenized = dataset.map(
-    lambda x: tokenizer(x["text"], truncation=True, padding="max_length", max_length=512),
-    batched=True,
-    remove_columns=dataset.column_names
-)
-tokenized = tokenized.map(lambda x: {"labels": x["input_ids"]})
+dataset = dataset.map(lambda x: tokenizer(x["text"], truncation=True, padding="max_length", max_length=512), batched=True)
+dataset.set_format(type="torch", columns=["input_ids", "attention_mask"])
 
-# 학습 설정
+peft_config = LoraConfig(
+    task_type=TaskType.CAUSAL_LM,
+    inference_mode=False,
+    r=8,
+    lora_alpha=16,
+    lora_dropout=0.1
+)
+model = get_peft_model(model, peft_config)
+
+print("🧪 Trainer 설정 중...")
+
 training_args = TrainingArguments(
-    output_dir=output_dir,
+    output_dir="outputs",
     per_device_train_batch_size=1,
-    gradient_accumulation_steps=2,
-    warmup_steps=10,
-    max_steps=45,
-    logging_steps=5,
-    save_steps=45,
+    gradient_accumulation_steps=8,
+    num_train_epochs=3,
+    learning_rate=2e-5,
     fp16=True,
-    logging_dir=f"{output_dir}/logs",
-    report_to="none",
+    logging_steps=1,
+    save_strategy="no",
+    report_to="none"
 )
 
 trainer = Trainer(
     model=model,
     args=training_args,
-    train_dataset=tokenized,
-    tokenizer=tokenizer,
+    train_dataset=dataset,
+    tokenizer=tokenizer
 )
 
+print("🚀 학습 시작...")
 trainer.train()
+print("✅ 학습 완료")
