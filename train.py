@@ -9,6 +9,7 @@ hf_token = os.environ["HF_TOKEN"]
 
 # 토크나이저 및 모델 로딩
 tokenizer = AutoTokenizer.from_pretrained(model_id, token=hf_token, trust_remote_code=True)
+tokenizer.pad_token = tokenizer.eos_token  # ✅ pad_token 명시 설정
 model = AutoModelForCausalLM.from_pretrained(model_id, token=hf_token, device_map="auto", torch_dtype="auto")
 
 # LoRA 설정
@@ -41,6 +42,7 @@ training_args = TrainingArguments(
     logging_steps=10,
     save_strategy="no",
     bf16=True,
+    remove_unused_columns=False,
     report_to="none"
 )
 
