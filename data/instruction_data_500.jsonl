@@ -1,0 +1,500 @@
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "첫 등원에 읽기 좋은 놀이책을 찾고 있어요.", "output": "type=놀이책, situation=첫 등원"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "동물을 배울 수 있는 책 있으면 알려주세요.", "output": "theme=동물"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "놀이책 중에서 4-6세세가 좋아할 만한 책 있을까요?", "output": "type=놀이책, age_range=4-6"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "2-4세세 아이랑 읽기 좋은 자연 책 추천해 주세요.", "output": "theme=자연, age_range=2-4"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "생일에 읽기 좋은 놀이책을 찾고 있어요.", "output": "type=놀이책, situation=생일"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "4-6세세 아이가 흥미로워할 만한 우정 책 추천받고 싶어요.", "output": "theme=우정, age_range=4-6"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "동물에 대해 자연스럽게 배울 수 있는 책이 궁금해요.", "output": "theme=동물"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 양치 시간이라 관련 도서 찾고 있어요.", "output": "situation=양치 시간"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이 눈높이에 맞는 보드북으로 우정을 알려주고 싶어요.", "output": "theme=우정, type=보드북"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "상상력 관련된 보드북이나 그림책 추천해주세요.", "output": "theme=상상력"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "0-2세세 아이랑 읽기 좋은 우정 책 추천해 주세요.", "output": "theme=우정, age_range=0-2"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "보드북 중에서 0-2세세가 좋아할 만한 책 있을까요?", "output": "type=보드북, age_range=0-2"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "잠자리 읽어주기 좋은 책 있을까요?", "output": "situation=잠자리"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "낯가림 심할 때에 읽기 좋은 보드북을 찾고 있어요.", "output": "type=보드북, situation=낯가림 심할 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이랑 같이 외출 전 전에 읽을만한 책이 있을까요?", "output": "situation=외출 전"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 요즘 감정 표현을 배우는 중이라 적절한 책이 필요해요.", "output": "theme=감정 표현"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이에게 동물 개념을 알려줄 좋은 놀이책 없을까요?", "output": "theme=동물, type=놀이책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 첫 등원이라 관련 도서 찾고 있어요.", "output": "situation=첫 등원"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "그림책 중에서 가족을 다룬 책이 있을까요?", "output": "theme=가족, type=그림책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "곧 양치 시간인데 그 전에 읽히기 좋은 책 있을까요?", "output": "situation=양치 시간"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이에게 배려 개념을 알려줄 좋은 그림책 없을까요?", "output": "theme=배려, type=그림책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "2-4세세 아이랑 읽기 좋은 계절 책 추천해 주세요.", "output": "theme=계절, age_range=2-4"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 요즘 동물을 배우는 중이라 적절한 책이 필요해요.", "output": "theme=동물"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "우리 아이가 계절에 관심이 많은데, 어떤 책이 좋을까요?", "output": "theme=계절"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "4-6세세 아이에게 맞는 놀이책 추천해 주세요.", "output": "type=놀이책, age_range=4-6"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 동물을 잘 못해서 관련 책이 있을까요?", "output": "theme=동물"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "상상력 관련된 보드북이나 그림책 추천해주세요.", "output": "theme=상상력"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 색깔에 대해 질문이 많아요. 도움이 될 책 있을까요?", "output": "theme=색깔"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "상상력을 배울 수 있는 책 있으면 알려주세요.", "output": "theme=상상력"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "보드북 중에서 배려을 다룬 책이 있을까요?", "output": "theme=배려, type=보드북"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 동물을 잘 못해서 관련 책이 있을까요?", "output": "theme=동물"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이에게 동물 개념을 알려줄 좋은 보드북 없을까요?", "output": "theme=동물, type=보드북"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "낯가림 심할 때 읽어주기 좋은 책 있을까요?", "output": "situation=낯가림 심할 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "곧 첫 등원인데 그 전에 읽히기 좋은 책 있을까요?", "output": "situation=첫 등원"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "자존감에 대해 자연스럽게 배울 수 있는 책이 궁금해요.", "output": "theme=자존감"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 요즘 동물을 배우는 중이라 적절한 책이 필요해요.", "output": "theme=동물"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "모양 주제의 정보책 책 있을까요?", "output": "theme=모양, type=정보책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 동물을 잘 못해서 관련 책이 있을까요?", "output": "theme=동물"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이 눈높이에 맞는 창작동화으로 감정 표현을 알려주고 싶어요.", "output": "theme=감정 표현, type=창작동화"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 모양을 잘 못해서 관련 책이 있을까요?", "output": "theme=모양"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "곧 낯가림 심할 때인데 그 전에 읽히기 좋은 책 있을까요?", "output": "situation=낯가림 심할 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "외출 전에 읽기 좋은 그림책을 찾고 있어요.", "output": "type=그림책, situation=외출 전"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "배려을 배울 수 있는 책 있으면 알려주세요.", "output": "theme=배려"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이에게 자연 개념을 알려줄 좋은 정보책 없을까요?", "output": "theme=자연, type=정보책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "상상력 관련된 보드북이나 그림책 추천해주세요.", "output": "theme=상상력"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "그림책 중에서 0-2세세가 좋아할 만한 책 있을까요?", "output": "type=그림책, age_range=0-2"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "외출 전 읽어주기 좋은 책 있을까요?", "output": "situation=외출 전"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 배려을 잘 못해서 관련 책이 있을까요?", "output": "theme=배려"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "동물을 배울 수 있는 책 있으면 알려주세요.", "output": "theme=동물"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이랑 같이 낯가림 심할 때 전에 읽을만한 책이 있을까요?", "output": "situation=낯가림 심할 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "감기 걸렸을 때 읽어주기 좋은 책 있을까요?", "output": "situation=감기 걸렸을 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "2-4세세 아이가 흥미로워할 만한 가족 책 추천받고 싶어요.", "output": "theme=가족, age_range=2-4"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "그림책 중에서 자존감을 다룬 책이 있을까요?", "output": "theme=자존감, type=그림책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 가족을 잘 못해서 관련 책이 있을까요?", "output": "theme=가족"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 모양에 대해 질문이 많아요. 도움이 될 책 있을까요?", "output": "theme=모양"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "감기 걸렸을 때 읽어주기 좋은 책 있을까요?", "output": "situation=감기 걸렸을 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "그림책 중에서 배려을 다룬 책이 있을까요?", "output": "theme=배려, type=그림책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 요즘 자연을 배우는 중이라 적절한 책이 필요해요.", "output": "theme=자연"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "상상력을 배울 수 있는 책 있으면 알려주세요.", "output": "theme=상상력"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "첫 등원에 읽기 좋은 보드북을 찾고 있어요.", "output": "type=보드북, situation=첫 등원"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "가족 관련된 보드북이나 그림책 추천해주세요.", "output": "theme=가족"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "우리 아이가 감정 표현에 관심이 많은데, 어떤 책이 좋을까요?", "output": "theme=감정 표현"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "감정 표현 주제의 그림책 책 있을까요?", "output": "theme=감정 표현, type=그림책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "놀이책 중에서 감정 표현을 다룬 책이 있을까요?", "output": "theme=감정 표현, type=놀이책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "우리 아이가 우정에 관심이 많은데, 어떤 책이 좋을까요?", "output": "theme=우정"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "감정 표현을 배울 수 있는 책 있으면 알려주세요.", "output": "theme=감정 표현"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "동물 관련된 보드북이나 그림책 추천해주세요.", "output": "theme=동물"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "0-2세세 아이랑 읽기 좋은 가족 책 추천해 주세요.", "output": "theme=가족, age_range=0-2"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이 눈높이에 맞는 그림책으로 계절을 알려주고 싶어요.", "output": "theme=계절, type=그림책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "외출 전에 읽기 좋은 보드북을 찾고 있어요.", "output": "type=보드북, situation=외출 전"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 요즘 계절을 배우는 중이라 적절한 책이 필요해요.", "output": "theme=계절"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "4-6세세 아이가 흥미로워할 만한 가족 책 추천받고 싶어요.", "output": "theme=가족, age_range=4-6"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "우리 아이가 자연에 관심이 많은데, 어떤 책이 좋을까요?", "output": "theme=자연"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "2-4세세 아이랑 읽기 좋은 가족 책 추천해 주세요.", "output": "theme=가족, age_range=2-4"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이에게 계절 개념을 알려줄 좋은 놀이책 없을까요?", "output": "theme=계절, type=놀이책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "2-4세세 아이에게 맞는 창작동화 추천해 주세요.", "output": "type=창작동화, age_range=2-4"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 낯가림 심할 때이라 관련 도서 찾고 있어요.", "output": "situation=낯가림 심할 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "모양을 배울 수 있는 책 있으면 알려주세요.", "output": "theme=모양"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "감정 표현을 배울 수 있는 책 있으면 알려주세요.", "output": "theme=감정 표현"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "모양에 대해 자연스럽게 배울 수 있는 책이 궁금해요.", "output": "theme=모양"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "놀이책 중에서 자연을 다룬 책이 있을까요?", "output": "theme=자연, type=놀이책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "우리 아이가 배려에 관심이 많은데, 어떤 책이 좋을까요?", "output": "theme=배려"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "생일에 읽기 좋은 놀이책을 찾고 있어요.", "output": "type=놀이책, situation=생일"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "감정 표현을 배울 수 있는 책 있으면 알려주세요.", "output": "theme=감정 표현"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "4-6세세 아이에게 맞는 정보책 추천해 주세요.", "output": "type=정보책, age_range=4-6"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "감정 표현 관련된 보드북이나 그림책 추천해주세요.", "output": "theme=감정 표현"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이에게 감정 표현 개념을 알려줄 좋은 보드북 없을까요?", "output": "theme=감정 표현, type=보드북"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "0-2세세 아이가 흥미로워할 만한 자연 책 추천받고 싶어요.", "output": "theme=자연, age_range=0-2"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "생일 읽어주기 좋은 책 있을까요?", "output": "situation=생일"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 동생이 생겼을 때이라 관련 도서 찾고 있어요.", "output": "situation=동생이 생겼을 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "동물 관련된 보드북이나 그림책 추천해주세요.", "output": "theme=동물"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "4-6세세 아이가 흥미로워할 만한 감정 표현 책 추천받고 싶어요.", "output": "theme=감정 표현, age_range=4-6"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "배려에 대해 자연스럽게 배울 수 있는 책이 궁금해요.", "output": "theme=배려"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "우리 아이가 상상력에 관심이 많은데, 어떤 책이 좋을까요?", "output": "theme=상상력"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이에게 가족 개념을 알려줄 좋은 창작동화 없을까요?", "output": "theme=가족, type=창작동화"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "곧 잠자리인데 그 전에 읽히기 좋은 책 있을까요?", "output": "situation=잠자리"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이에게 가족 개념을 알려줄 좋은 그림책 없을까요?", "output": "theme=가족, type=그림책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이 눈높이에 맞는 보드북으로 배려을 알려주고 싶어요.", "output": "theme=배려, type=보드북"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이 눈높이에 맞는 놀이책으로 색깔을 알려주고 싶어요.", "output": "theme=색깔, type=놀이책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 요즘 감정 표현을 배우는 중이라 적절한 책이 필요해요.", "output": "theme=감정 표현"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "동생이 생겼을 때 읽어주기 좋은 책 있을까요?", "output": "situation=동생이 생겼을 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "0-2세세 아이가 흥미로워할 만한 가족 책 추천받고 싶어요.", "output": "theme=가족, age_range=0-2"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이 눈높이에 맞는 창작동화으로 자존감을 알려주고 싶어요.", "output": "theme=자존감, type=창작동화"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "창작동화 중에서 모양을 다룬 책이 있을까요?", "output": "theme=모양, type=창작동화"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "2-4세세 아이가 흥미로워할 만한 모양 책 추천받고 싶어요.", "output": "theme=모양, age_range=2-4"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이랑 같이 첫 등원 전에 읽을만한 책이 있을까요?", "output": "situation=첫 등원"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "놀이책 중에서 자존감을 다룬 책이 있을까요?", "output": "theme=자존감, type=놀이책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "첫 등원 읽어주기 좋은 책 있을까요?", "output": "situation=첫 등원"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 감정 표현에 대해 질문이 많아요. 도움이 될 책 있을까요?", "output": "theme=감정 표현"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "2-4세세 아이가 흥미로워할 만한 모양 책 추천받고 싶어요.", "output": "theme=모양, age_range=2-4"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "상상력 관련된 보드북이나 그림책 추천해주세요.", "output": "theme=상상력"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "상상력 주제의 놀이책 책 있을까요?", "output": "theme=상상력, type=놀이책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 우정에 대해 질문이 많아요. 도움이 될 책 있을까요?", "output": "theme=우정"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "낯가림 심할 때 읽어주기 좋은 책 있을까요?", "output": "situation=낯가림 심할 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "우리 아이가 동물에 관심이 많은데, 어떤 책이 좋을까요?", "output": "theme=동물"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "우정에 대해 자연스럽게 배울 수 있는 책이 궁금해요.", "output": "theme=우정"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이랑 같이 생일 전에 읽을만한 책이 있을까요?", "output": "situation=생일"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "4-6세세 아이가 흥미로워할 만한 상상력 책 추천받고 싶어요.", "output": "theme=상상력, age_range=4-6"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "모양 관련된 보드북이나 그림책 추천해주세요.", "output": "theme=모양"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "창작동화 중에서 감정 표현을 다룬 책이 있을까요?", "output": "theme=감정 표현, type=창작동화"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "우정 관련된 보드북이나 그림책 추천해주세요.", "output": "theme=우정"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "4-6세세 아이가 흥미로워할 만한 계절 책 추천받고 싶어요.", "output": "theme=계절, age_range=4-6"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "정보책 중에서 모양을 다룬 책이 있을까요?", "output": "theme=모양, type=정보책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "0-2세세 아이가 흥미로워할 만한 자연 책 추천받고 싶어요.", "output": "theme=자연, age_range=0-2"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 자존감을 잘 못해서 관련 책이 있을까요?", "output": "theme=자존감"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "생일에 읽기 좋은 창작동화을 찾고 있어요.", "output": "type=창작동화, situation=생일"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "동생이 생겼을 때에 읽기 좋은 창작동화을 찾고 있어요.", "output": "type=창작동화, situation=동생이 생겼을 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "2-4세세 아이가 흥미로워할 만한 감정 표현 책 추천받고 싶어요.", "output": "theme=감정 표현, age_range=2-4"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 동물에 대해 질문이 많아요. 도움이 될 책 있을까요?", "output": "theme=동물"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 감정 표현을 잘 못해서 관련 책이 있을까요?", "output": "theme=감정 표현"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 계절에 대해 질문이 많아요. 도움이 될 책 있을까요?", "output": "theme=계절"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "배려 주제의 그림책 책 있을까요?", "output": "theme=배려, type=그림책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "감정 표현을 배울 수 있는 책 있으면 알려주세요.", "output": "theme=감정 표현"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "4-6세세 아이랑 읽기 좋은 가족 책 추천해 주세요.", "output": "theme=가족, age_range=4-6"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이랑 같이 양치 시간 전에 읽을만한 책이 있을까요?", "output": "situation=양치 시간"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "우리 아이가 자연에 관심이 많은데, 어떤 책이 좋을까요?", "output": "theme=자연"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "낯가림 심할 때 읽어주기 좋은 책 있을까요?", "output": "situation=낯가림 심할 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "곧 외출 전인데 그 전에 읽히기 좋은 책 있을까요?", "output": "situation=외출 전"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "정보책 중에서 2-4세세가 좋아할 만한 책 있을까요?", "output": "type=정보책, age_range=2-4"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "그림책 중에서 4-6세세가 좋아할 만한 책 있을까요?", "output": "type=그림책, age_range=4-6"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 첫 등원이라 관련 도서 찾고 있어요.", "output": "situation=첫 등원"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 자존감에 대해 질문이 많아요. 도움이 될 책 있을까요?", "output": "theme=자존감"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 상상력에 대해 질문이 많아요. 도움이 될 책 있을까요?", "output": "theme=상상력"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "상상력에 대해 자연스럽게 배울 수 있는 책이 궁금해요.", "output": "theme=상상력"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 모양에 대해 질문이 많아요. 도움이 될 책 있을까요?", "output": "theme=모양"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이에게 동물 개념을 알려줄 좋은 정보책 없을까요?", "output": "theme=동물, type=정보책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "첫 등원에 읽기 좋은 정보책을 찾고 있어요.", "output": "type=정보책, situation=첫 등원"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이랑 같이 잠자리 전에 읽을만한 책이 있을까요?", "output": "situation=잠자리"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "배려을 배울 수 있는 책 있으면 알려주세요.", "output": "theme=배려"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 가족을 잘 못해서 관련 책이 있을까요?", "output": "theme=가족"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 요즘 자연을 배우는 중이라 적절한 책이 필요해요.", "output": "theme=자연"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "곧 감기 걸렸을 때인데 그 전에 읽히기 좋은 책 있을까요?", "output": "situation=감기 걸렸을 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 색깔에 대해 질문이 많아요. 도움이 될 책 있을까요?", "output": "theme=색깔"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "우리 아이가 동물에 관심이 많은데, 어떤 책이 좋을까요?", "output": "theme=동물"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "0-2세세 아이에게 맞는 창작동화 추천해 주세요.", "output": "type=창작동화, age_range=0-2"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "자연 관련된 보드북이나 그림책 추천해주세요.", "output": "theme=자연"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "생일에 읽기 좋은 놀이책을 찾고 있어요.", "output": "type=놀이책, situation=생일"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "배려 관련된 보드북이나 그림책 추천해주세요.", "output": "theme=배려"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 첫 등원이라 관련 도서 찾고 있어요.", "output": "situation=첫 등원"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이랑 같이 양치 시간 전에 읽을만한 책이 있을까요?", "output": "situation=양치 시간"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이에게 색깔 개념을 알려줄 좋은 그림책 없을까요?", "output": "theme=색깔, type=그림책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이에게 모양 개념을 알려줄 좋은 보드북 없을까요?", "output": "theme=모양, type=보드북"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 동생이 생겼을 때이라 관련 도서 찾고 있어요.", "output": "situation=동생이 생겼을 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "곧 첫 등원인데 그 전에 읽히기 좋은 책 있을까요?", "output": "situation=첫 등원"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "우리 아이가 모양에 관심이 많은데, 어떤 책이 좋을까요?", "output": "theme=모양"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "0-2세세 아이가 흥미로워할 만한 우정 책 추천받고 싶어요.", "output": "theme=우정, age_range=0-2"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이 눈높이에 맞는 정보책으로 우정을 알려주고 싶어요.", "output": "theme=우정, type=정보책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "상상력 주제의 보드북 책 있을까요?", "output": "theme=상상력, type=보드북"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 감기 걸렸을 때이라 관련 도서 찾고 있어요.", "output": "situation=감기 걸렸을 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "4-6세세 아이에게 맞는 보드북 추천해 주세요.", "output": "type=보드북, age_range=4-6"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "모양을 배울 수 있는 책 있으면 알려주세요.", "output": "theme=모양"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "생일 읽어주기 좋은 책 있을까요?", "output": "situation=생일"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "우리 아이가 색깔에 관심이 많은데, 어떤 책이 좋을까요?", "output": "theme=색깔"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "4-6세세 아이에게 맞는 정보책 추천해 주세요.", "output": "type=정보책, age_range=4-6"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 가족을 잘 못해서 관련 책이 있을까요?", "output": "theme=가족"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 요즘 자연을 배우는 중이라 적절한 책이 필요해요.", "output": "theme=자연"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "우리 아이가 자연에 관심이 많은데, 어떤 책이 좋을까요?", "output": "theme=자연"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "우리 아이가 동물에 관심이 많은데, 어떤 책이 좋을까요?", "output": "theme=동물"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "2-4세세 아이가 흥미로워할 만한 감정 표현 책 추천받고 싶어요.", "output": "theme=감정 표현, age_range=2-4"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "우정을 배울 수 있는 책 있으면 알려주세요.", "output": "theme=우정"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이에게 우정 개념을 알려줄 좋은 그림책 없을까요?", "output": "theme=우정, type=그림책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "모양 주제의 창작동화 책 있을까요?", "output": "theme=모양, type=창작동화"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "4-6세세 아이에게 맞는 놀이책 추천해 주세요.", "output": "type=놀이책, age_range=4-6"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "2-4세세 아이가 흥미로워할 만한 계절 책 추천받고 싶어요.", "output": "theme=계절, age_range=2-4"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이랑 같이 감기 걸렸을 때 전에 읽을만한 책이 있을까요?", "output": "situation=감기 걸렸을 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "0-2세세 아이랑 읽기 좋은 동물 책 추천해 주세요.", "output": "theme=동물, age_range=0-2"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "0-2세세 아이가 흥미로워할 만한 자연 책 추천받고 싶어요.", "output": "theme=자연, age_range=0-2"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "0-2세세 아이가 흥미로워할 만한 감정 표현 책 추천받고 싶어요.", "output": "theme=감정 표현, age_range=0-2"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "곧 양치 시간인데 그 전에 읽히기 좋은 책 있을까요?", "output": "situation=양치 시간"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "배려 주제의 놀이책 책 있을까요?", "output": "theme=배려, type=놀이책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 감정 표현에 대해 질문이 많아요. 도움이 될 책 있을까요?", "output": "theme=감정 표현"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "첫 등원 읽어주기 좋은 책 있을까요?", "output": "situation=첫 등원"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "0-2세세 아이가 흥미로워할 만한 색깔 책 추천받고 싶어요.", "output": "theme=색깔, age_range=0-2"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "낯가림 심할 때 읽어주기 좋은 책 있을까요?", "output": "situation=낯가림 심할 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "자연을 배울 수 있는 책 있으면 알려주세요.", "output": "theme=자연"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "낯가림 심할 때에 읽기 좋은 놀이책을 찾고 있어요.", "output": "type=놀이책, situation=낯가림 심할 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "양치 시간 읽어주기 좋은 책 있을까요?", "output": "situation=양치 시간"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이랑 같이 감기 걸렸을 때 전에 읽을만한 책이 있을까요?", "output": "situation=감기 걸렸을 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이랑 같이 감기 걸렸을 때 전에 읽을만한 책이 있을까요?", "output": "situation=감기 걸렸을 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "잠자리 읽어주기 좋은 책 있을까요?", "output": "situation=잠자리"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 낯가림 심할 때이라 관련 도서 찾고 있어요.", "output": "situation=낯가림 심할 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "양치 시간에 읽기 좋은 놀이책을 찾고 있어요.", "output": "type=놀이책, situation=양치 시간"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "우정을 배울 수 있는 책 있으면 알려주세요.", "output": "theme=우정"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "곧 감기 걸렸을 때인데 그 전에 읽히기 좋은 책 있을까요?", "output": "situation=감기 걸렸을 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "0-2세세 아이랑 읽기 좋은 자존감 책 추천해 주세요.", "output": "theme=자존감, age_range=0-2"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "곧 감기 걸렸을 때인데 그 전에 읽히기 좋은 책 있을까요?", "output": "situation=감기 걸렸을 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이랑 같이 감기 걸렸을 때 전에 읽을만한 책이 있을까요?", "output": "situation=감기 걸렸을 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이에게 자존감 개념을 알려줄 좋은 창작동화 없을까요?", "output": "theme=자존감, type=창작동화"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "외출 전에 읽기 좋은 보드북을 찾고 있어요.", "output": "type=보드북, situation=외출 전"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "배려을 배울 수 있는 책 있으면 알려주세요.", "output": "theme=배려"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "0-2세세 아이에게 맞는 창작동화 추천해 주세요.", "output": "type=창작동화, age_range=0-2"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "배려 주제의 놀이책 책 있을까요?", "output": "theme=배려, type=놀이책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "첫 등원에 읽기 좋은 창작동화을 찾고 있어요.", "output": "type=창작동화, situation=첫 등원"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "그림책 중에서 배려을 다룬 책이 있을까요?", "output": "theme=배려, type=그림책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이에게 자연 개념을 알려줄 좋은 보드북 없을까요?", "output": "theme=자연, type=보드북"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "양치 시간 읽어주기 좋은 책 있을까요?", "output": "situation=양치 시간"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이 눈높이에 맞는 놀이책으로 상상력을 알려주고 싶어요.", "output": "theme=상상력, type=놀이책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "정보책 중에서 4-6세세가 좋아할 만한 책 있을까요?", "output": "type=정보책, age_range=4-6"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이 눈높이에 맞는 보드북으로 상상력을 알려주고 싶어요.", "output": "theme=상상력, type=보드북"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "배려에 대해 자연스럽게 배울 수 있는 책이 궁금해요.", "output": "theme=배려"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "동생이 생겼을 때 읽어주기 좋은 책 있을까요?", "output": "situation=동생이 생겼을 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 낯가림 심할 때이라 관련 도서 찾고 있어요.", "output": "situation=낯가림 심할 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이랑 같이 잠자리 전에 읽을만한 책이 있을까요?", "output": "situation=잠자리"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 요즘 계절을 배우는 중이라 적절한 책이 필요해요.", "output": "theme=계절"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "0-2세세 아이가 흥미로워할 만한 계절 책 추천받고 싶어요.", "output": "theme=계절, age_range=0-2"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이에게 배려 개념을 알려줄 좋은 놀이책 없을까요?", "output": "theme=배려, type=놀이책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "곧 낯가림 심할 때인데 그 전에 읽히기 좋은 책 있을까요?", "output": "situation=낯가림 심할 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이 눈높이에 맞는 보드북으로 우정을 알려주고 싶어요.", "output": "theme=우정, type=보드북"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "외출 전에 읽기 좋은 그림책을 찾고 있어요.", "output": "type=그림책, situation=외출 전"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "감기 걸렸을 때에 읽기 좋은 놀이책을 찾고 있어요.", "output": "type=놀이책, situation=감기 걸렸을 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 요즘 자존감을 배우는 중이라 적절한 책이 필요해요.", "output": "theme=자존감"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이랑 같이 생일 전에 읽을만한 책이 있을까요?", "output": "situation=생일"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 생일이라 관련 도서 찾고 있어요.", "output": "situation=생일"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "동생이 생겼을 때 읽어주기 좋은 책 있을까요?", "output": "situation=동생이 생겼을 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이랑 같이 생일 전에 읽을만한 책이 있을까요?", "output": "situation=생일"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "동물을 배울 수 있는 책 있으면 알려주세요.", "output": "theme=동물"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "색깔 주제의 놀이책 책 있을까요?", "output": "theme=색깔, type=놀이책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이에게 가족 개념을 알려줄 좋은 놀이책 없을까요?", "output": "theme=가족, type=놀이책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "창작동화 중에서 자연을 다룬 책이 있을까요?", "output": "theme=자연, type=창작동화"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "2-4세세 아이가 흥미로워할 만한 계절 책 추천받고 싶어요.", "output": "theme=계절, age_range=2-4"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 감정 표현에 대해 질문이 많아요. 도움이 될 책 있을까요?", "output": "theme=감정 표현"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이 눈높이에 맞는 창작동화으로 배려을 알려주고 싶어요.", "output": "theme=배려, type=창작동화"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 계절에 대해 질문이 많아요. 도움이 될 책 있을까요?", "output": "theme=계절"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "상상력 주제의 정보책 책 있을까요?", "output": "theme=상상력, type=정보책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "상상력에 대해 자연스럽게 배울 수 있는 책이 궁금해요.", "output": "theme=상상력"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "창작동화 중에서 0-2세세가 좋아할 만한 책 있을까요?", "output": "type=창작동화, age_range=0-2"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "창작동화 중에서 4-6세세가 좋아할 만한 책 있을까요?", "output": "type=창작동화, age_range=4-6"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "낯가림 심할 때에 읽기 좋은 창작동화을 찾고 있어요.", "output": "type=창작동화, situation=낯가림 심할 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이랑 같이 생일 전에 읽을만한 책이 있을까요?", "output": "situation=생일"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이에게 가족 개념을 알려줄 좋은 놀이책 없을까요?", "output": "theme=가족, type=놀이책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 낯가림 심할 때이라 관련 도서 찾고 있어요.", "output": "situation=낯가림 심할 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "우정에 대해 자연스럽게 배울 수 있는 책이 궁금해요.", "output": "theme=우정"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "놀이책 중에서 4-6세세가 좋아할 만한 책 있을까요?", "output": "type=놀이책, age_range=4-6"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "자연 관련된 보드북이나 그림책 추천해주세요.", "output": "theme=자연"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이랑 같이 외출 전 전에 읽을만한 책이 있을까요?", "output": "situation=외출 전"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이 눈높이에 맞는 창작동화으로 동물을 알려주고 싶어요.", "output": "theme=동물, type=창작동화"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이에게 동물 개념을 알려줄 좋은 창작동화 없을까요?", "output": "theme=동물, type=창작동화"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이에게 동물 개념을 알려줄 좋은 창작동화 없을까요?", "output": "theme=동물, type=창작동화"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 첫 등원이라 관련 도서 찾고 있어요.", "output": "situation=첫 등원"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 감정 표현을 잘 못해서 관련 책이 있을까요?", "output": "theme=감정 표현"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "가족을 배울 수 있는 책 있으면 알려주세요.", "output": "theme=가족"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "가족 관련된 보드북이나 그림책 추천해주세요.", "output": "theme=가족"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "보드북 중에서 가족을 다룬 책이 있을까요?", "output": "theme=가족, type=보드북"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "4-6세세 아이에게 맞는 창작동화 추천해 주세요.", "output": "type=창작동화, age_range=4-6"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 요즘 모양을 배우는 중이라 적절한 책이 필요해요.", "output": "theme=모양"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "정보책 중에서 자존감을 다룬 책이 있을까요?", "output": "theme=자존감, type=정보책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 색깔을 잘 못해서 관련 책이 있을까요?", "output": "theme=색깔"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "첫 등원 읽어주기 좋은 책 있을까요?", "output": "situation=첫 등원"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "2-4세세 아이랑 읽기 좋은 배려 책 추천해 주세요.", "output": "theme=배려, age_range=2-4"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "우리 아이가 동물에 관심이 많은데, 어떤 책이 좋을까요?", "output": "theme=동물"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "0-2세세 아이가 흥미로워할 만한 우정 책 추천받고 싶어요.", "output": "theme=우정, age_range=0-2"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "곧 첫 등원인데 그 전에 읽히기 좋은 책 있을까요?", "output": "situation=첫 등원"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "감기 걸렸을 때에 읽기 좋은 놀이책을 찾고 있어요.", "output": "type=놀이책, situation=감기 걸렸을 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "낯가림 심할 때에 읽기 좋은 보드북을 찾고 있어요.", "output": "type=보드북, situation=낯가림 심할 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "곧 첫 등원인데 그 전에 읽히기 좋은 책 있을까요?", "output": "situation=첫 등원"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이랑 같이 낯가림 심할 때 전에 읽을만한 책이 있을까요?", "output": "situation=낯가림 심할 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "우리 아이가 우정에 관심이 많은데, 어떤 책이 좋을까요?", "output": "theme=우정"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "감기 걸렸을 때에 읽기 좋은 그림책을 찾고 있어요.", "output": "type=그림책, situation=감기 걸렸을 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이랑 같이 양치 시간 전에 읽을만한 책이 있을까요?", "output": "situation=양치 시간"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "상상력 주제의 창작동화 책 있을까요?", "output": "theme=상상력, type=창작동화"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "2-4세세 아이랑 읽기 좋은 색깔 책 추천해 주세요.", "output": "theme=색깔, age_range=2-4"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "감기 걸렸을 때 읽어주기 좋은 책 있을까요?", "output": "situation=감기 걸렸을 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "모양에 대해 자연스럽게 배울 수 있는 책이 궁금해요.", "output": "theme=모양"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 자연을 잘 못해서 관련 책이 있을까요?", "output": "theme=자연"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이에게 자존감 개념을 알려줄 좋은 창작동화 없을까요?", "output": "theme=자존감, type=창작동화"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "상상력을 배울 수 있는 책 있으면 알려주세요.", "output": "theme=상상력"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "양치 시간에 읽기 좋은 보드북을 찾고 있어요.", "output": "type=보드북, situation=양치 시간"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "곧 감기 걸렸을 때인데 그 전에 읽히기 좋은 책 있을까요?", "output": "situation=감기 걸렸을 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "우리 아이가 가족에 관심이 많은데, 어떤 책이 좋을까요?", "output": "theme=가족"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "첫 등원에 읽기 좋은 정보책을 찾고 있어요.", "output": "type=정보책, situation=첫 등원"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "창작동화 중에서 2-4세세가 좋아할 만한 책 있을까요?", "output": "type=창작동화, age_range=2-4"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 배려에 대해 질문이 많아요. 도움이 될 책 있을까요?", "output": "theme=배려"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 첫 등원이라 관련 도서 찾고 있어요.", "output": "situation=첫 등원"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "동물에 대해 자연스럽게 배울 수 있는 책이 궁금해요.", "output": "theme=동물"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 자연을 잘 못해서 관련 책이 있을까요?", "output": "theme=자연"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이에게 계절 개념을 알려줄 좋은 그림책 없을까요?", "output": "theme=계절, type=그림책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "양치 시간 읽어주기 좋은 책 있을까요?", "output": "situation=양치 시간"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "첫 등원 읽어주기 좋은 책 있을까요?", "output": "situation=첫 등원"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "우리 아이가 자존감에 관심이 많은데, 어떤 책이 좋을까요?", "output": "theme=자존감"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 우정에 대해 질문이 많아요. 도움이 될 책 있을까요?", "output": "theme=우정"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이에게 우정 개념을 알려줄 좋은 정보책 없을까요?", "output": "theme=우정, type=정보책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "정보책 중에서 계절을 다룬 책이 있을까요?", "output": "theme=계절, type=정보책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 동생이 생겼을 때이라 관련 도서 찾고 있어요.", "output": "situation=동생이 생겼을 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "자존감 관련된 보드북이나 그림책 추천해주세요.", "output": "theme=자존감"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "계절을 배울 수 있는 책 있으면 알려주세요.", "output": "theme=계절"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 요즘 자연을 배우는 중이라 적절한 책이 필요해요.", "output": "theme=자연"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 배려에 대해 질문이 많아요. 도움이 될 책 있을까요?", "output": "theme=배려"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 가족에 대해 질문이 많아요. 도움이 될 책 있을까요?", "output": "theme=가족"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "동물 관련된 보드북이나 그림책 추천해주세요.", "output": "theme=동물"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "0-2세세 아이에게 맞는 창작동화 추천해 주세요.", "output": "type=창작동화, age_range=0-2"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "색깔 관련된 보드북이나 그림책 추천해주세요.", "output": "theme=색깔"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이 눈높이에 맞는 그림책으로 우정을 알려주고 싶어요.", "output": "theme=우정, type=그림책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "색깔 주제의 놀이책 책 있을까요?", "output": "theme=색깔, type=놀이책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "계절 관련된 보드북이나 그림책 추천해주세요.", "output": "theme=계절"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 배려에 대해 질문이 많아요. 도움이 될 책 있을까요?", "output": "theme=배려"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이랑 같이 잠자리 전에 읽을만한 책이 있을까요?", "output": "situation=잠자리"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 잠자리이라 관련 도서 찾고 있어요.", "output": "situation=잠자리"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "가족 관련된 보드북이나 그림책 추천해주세요.", "output": "theme=가족"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 요즘 모양을 배우는 중이라 적절한 책이 필요해요.", "output": "theme=모양"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "우리 아이가 색깔에 관심이 많은데, 어떤 책이 좋을까요?", "output": "theme=색깔"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이 눈높이에 맞는 창작동화으로 가족을 알려주고 싶어요.", "output": "theme=가족, type=창작동화"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 자연을 잘 못해서 관련 책이 있을까요?", "output": "theme=자연"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "생일에 읽기 좋은 정보책을 찾고 있어요.", "output": "type=정보책, situation=생일"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이 눈높이에 맞는 놀이책으로 우정을 알려주고 싶어요.", "output": "theme=우정, type=놀이책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이에게 우정 개념을 알려줄 좋은 창작동화 없을까요?", "output": "theme=우정, type=창작동화"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 우정에 대해 질문이 많아요. 도움이 될 책 있을까요?", "output": "theme=우정"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 계절을 잘 못해서 관련 책이 있을까요?", "output": "theme=계절"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "잠자리에 읽기 좋은 놀이책을 찾고 있어요.", "output": "type=놀이책, situation=잠자리"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "계절 관련된 보드북이나 그림책 추천해주세요.", "output": "theme=계절"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이 눈높이에 맞는 놀이책으로 계절을 알려주고 싶어요.", "output": "theme=계절, type=놀이책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "정보책 중에서 0-2세세가 좋아할 만한 책 있을까요?", "output": "type=정보책, age_range=0-2"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "창작동화 중에서 자연을 다룬 책이 있을까요?", "output": "theme=자연, type=창작동화"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 자존감을 잘 못해서 관련 책이 있을까요?", "output": "theme=자존감"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "창작동화 중에서 0-2세세가 좋아할 만한 책 있을까요?", "output": "type=창작동화, age_range=0-2"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "우리 아이가 배려에 관심이 많은데, 어떤 책이 좋을까요?", "output": "theme=배려"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이 눈높이에 맞는 정보책으로 감정 표현을 알려주고 싶어요.", "output": "theme=감정 표현, type=정보책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "배려에 대해 자연스럽게 배울 수 있는 책이 궁금해요.", "output": "theme=배려"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "상상력에 대해 자연스럽게 배울 수 있는 책이 궁금해요.", "output": "theme=상상력"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이 눈높이에 맞는 정보책으로 감정 표현을 알려주고 싶어요.", "output": "theme=감정 표현, type=정보책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "2-4세세 아이가 흥미로워할 만한 색깔 책 추천받고 싶어요.", "output": "theme=색깔, age_range=2-4"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "우리 아이가 자연에 관심이 많은데, 어떤 책이 좋을까요?", "output": "theme=자연"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "우리 아이가 배려에 관심이 많은데, 어떤 책이 좋을까요?", "output": "theme=배려"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "창작동화 중에서 계절을 다룬 책이 있을까요?", "output": "theme=계절, type=창작동화"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "2-4세세 아이랑 읽기 좋은 색깔 책 추천해 주세요.", "output": "theme=색깔, age_range=2-4"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 계절에 대해 질문이 많아요. 도움이 될 책 있을까요?", "output": "theme=계절"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "배려 주제의 놀이책 책 있을까요?", "output": "theme=배려, type=놀이책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "계절을 배울 수 있는 책 있으면 알려주세요.", "output": "theme=계절"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 상상력에 대해 질문이 많아요. 도움이 될 책 있을까요?", "output": "theme=상상력"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "모양을 배울 수 있는 책 있으면 알려주세요.", "output": "theme=모양"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이 눈높이에 맞는 보드북으로 자존감을 알려주고 싶어요.", "output": "theme=자존감, type=보드북"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "동물에 대해 자연스럽게 배울 수 있는 책이 궁금해요.", "output": "theme=동물"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "4-6세세 아이에게 맞는 창작동화 추천해 주세요.", "output": "type=창작동화, age_range=4-6"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 요즘 색깔을 배우는 중이라 적절한 책이 필요해요.", "output": "theme=색깔"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "우리 아이가 우정에 관심이 많은데, 어떤 책이 좋을까요?", "output": "theme=우정"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "감정 표현에 대해 자연스럽게 배울 수 있는 책이 궁금해요.", "output": "theme=감정 표현"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "놀이책 중에서 0-2세세가 좋아할 만한 책 있을까요?", "output": "type=놀이책, age_range=0-2"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "2-4세세 아이에게 맞는 그림책 추천해 주세요.", "output": "type=그림책, age_range=2-4"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "가족 관련된 보드북이나 그림책 추천해주세요.", "output": "theme=가족"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "색깔 관련된 보드북이나 그림책 추천해주세요.", "output": "theme=색깔"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "감정 표현에 대해 자연스럽게 배울 수 있는 책이 궁금해요.", "output": "theme=감정 표현"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "가족을 배울 수 있는 책 있으면 알려주세요.", "output": "theme=가족"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "낯가림 심할 때 읽어주기 좋은 책 있을까요?", "output": "situation=낯가림 심할 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "2-4세세 아이가 흥미로워할 만한 계절 책 추천받고 싶어요.", "output": "theme=계절, age_range=2-4"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "낯가림 심할 때에 읽기 좋은 놀이책을 찾고 있어요.", "output": "type=놀이책, situation=낯가림 심할 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "0-2세세 아이에게 맞는 그림책 추천해 주세요.", "output": "type=그림책, age_range=0-2"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "정보책 중에서 0-2세세가 좋아할 만한 책 있을까요?", "output": "type=정보책, age_range=0-2"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "그림책 중에서 4-6세세가 좋아할 만한 책 있을까요?", "output": "type=그림책, age_range=4-6"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "0-2세세 아이에게 맞는 보드북 추천해 주세요.", "output": "type=보드북, age_range=0-2"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "4-6세세 아이가 흥미로워할 만한 감정 표현 책 추천받고 싶어요.", "output": "theme=감정 표현, age_range=4-6"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이에게 계절 개념을 알려줄 좋은 놀이책 없을까요?", "output": "theme=계절, type=놀이책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이랑 같이 첫 등원 전에 읽을만한 책이 있을까요?", "output": "situation=첫 등원"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "잠자리에 읽기 좋은 놀이책을 찾고 있어요.", "output": "type=놀이책, situation=잠자리"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "감정 표현을 배울 수 있는 책 있으면 알려주세요.", "output": "theme=감정 표현"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 동생이 생겼을 때이라 관련 도서 찾고 있어요.", "output": "situation=동생이 생겼을 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "곧 첫 등원인데 그 전에 읽히기 좋은 책 있을까요?", "output": "situation=첫 등원"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "상상력을 배울 수 있는 책 있으면 알려주세요.", "output": "theme=상상력"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "색깔을 배울 수 있는 책 있으면 알려주세요.", "output": "theme=색깔"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "놀이책 중에서 색깔을 다룬 책이 있을까요?", "output": "theme=색깔, type=놀이책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "보드북 중에서 배려을 다룬 책이 있을까요?", "output": "theme=배려, type=보드북"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 우정에 대해 질문이 많아요. 도움이 될 책 있을까요?", "output": "theme=우정"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "계절 주제의 보드북 책 있을까요?", "output": "theme=계절, type=보드북"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "감정 표현에 대해 자연스럽게 배울 수 있는 책이 궁금해요.", "output": "theme=감정 표현"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 잠자리이라 관련 도서 찾고 있어요.", "output": "situation=잠자리"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "정보책 중에서 자연을 다룬 책이 있을까요?", "output": "theme=자연, type=정보책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "2-4세세 아이랑 읽기 좋은 모양 책 추천해 주세요.", "output": "theme=모양, age_range=2-4"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "잠자리 읽어주기 좋은 책 있을까요?", "output": "situation=잠자리"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "정보책 중에서 모양을 다룬 책이 있을까요?", "output": "theme=모양, type=정보책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 감기 걸렸을 때이라 관련 도서 찾고 있어요.", "output": "situation=감기 걸렸을 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "4-6세세 아이가 흥미로워할 만한 우정 책 추천받고 싶어요.", "output": "theme=우정, age_range=4-6"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "가족 관련된 보드북이나 그림책 추천해주세요.", "output": "theme=가족"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "낯가림 심할 때에 읽기 좋은 놀이책을 찾고 있어요.", "output": "type=놀이책, situation=낯가림 심할 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 요즘 색깔을 배우는 중이라 적절한 책이 필요해요.", "output": "theme=색깔"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이에게 가족 개념을 알려줄 좋은 정보책 없을까요?", "output": "theme=가족, type=정보책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "4-6세세 아이가 흥미로워할 만한 배려 책 추천받고 싶어요.", "output": "theme=배려, age_range=4-6"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "0-2세세 아이에게 맞는 보드북 추천해 주세요.", "output": "type=보드북, age_range=0-2"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "계절 관련된 보드북이나 그림책 추천해주세요.", "output": "theme=계절"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이랑 같이 감기 걸렸을 때 전에 읽을만한 책이 있을까요?", "output": "situation=감기 걸렸을 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 낯가림 심할 때이라 관련 도서 찾고 있어요.", "output": "situation=낯가림 심할 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "모양에 대해 자연스럽게 배울 수 있는 책이 궁금해요.", "output": "theme=모양"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "우리 아이가 계절에 관심이 많은데, 어떤 책이 좋을까요?", "output": "theme=계절"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "잠자리에 읽기 좋은 그림책을 찾고 있어요.", "output": "type=그림책, situation=잠자리"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "배려 관련된 보드북이나 그림책 추천해주세요.", "output": "theme=배려"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "2-4세세 아이랑 읽기 좋은 자존감 책 추천해 주세요.", "output": "theme=자존감, age_range=2-4"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 요즘 자연을 배우는 중이라 적절한 책이 필요해요.", "output": "theme=자연"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 낯가림 심할 때이라 관련 도서 찾고 있어요.", "output": "situation=낯가림 심할 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 요즘 계절을 배우는 중이라 적절한 책이 필요해요.", "output": "theme=계절"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "우리 아이가 색깔에 관심이 많은데, 어떤 책이 좋을까요?", "output": "theme=색깔"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "0-2세세 아이랑 읽기 좋은 가족 책 추천해 주세요.", "output": "theme=가족, age_range=0-2"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 우정을 잘 못해서 관련 책이 있을까요?", "output": "theme=우정"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "놀이책 중에서 배려을 다룬 책이 있을까요?", "output": "theme=배려, type=놀이책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 양치 시간이라 관련 도서 찾고 있어요.", "output": "situation=양치 시간"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "4-6세세 아이랑 읽기 좋은 상상력 책 추천해 주세요.", "output": "theme=상상력, age_range=4-6"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "동물 주제의 보드북 책 있을까요?", "output": "theme=동물, type=보드북"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "4-6세세 아이에게 맞는 정보책 추천해 주세요.", "output": "type=정보책, age_range=4-6"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "모양 관련된 보드북이나 그림책 추천해주세요.", "output": "theme=모양"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "우리 아이가 자연에 관심이 많은데, 어떤 책이 좋을까요?", "output": "theme=자연"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "보드북 중에서 모양을 다룬 책이 있을까요?", "output": "theme=모양, type=보드북"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "양치 시간 읽어주기 좋은 책 있을까요?", "output": "situation=양치 시간"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이에게 색깔 개념을 알려줄 좋은 정보책 없을까요?", "output": "theme=색깔, type=정보책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 계절에 대해 질문이 많아요. 도움이 될 책 있을까요?", "output": "theme=계절"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "우리 아이가 배려에 관심이 많은데, 어떤 책이 좋을까요?", "output": "theme=배려"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "동생이 생겼을 때에 읽기 좋은 창작동화을 찾고 있어요.", "output": "type=창작동화, situation=동생이 생겼을 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "가족에 대해 자연스럽게 배울 수 있는 책이 궁금해요.", "output": "theme=가족"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 잠자리이라 관련 도서 찾고 있어요.", "output": "situation=잠자리"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 요즘 배려을 배우는 중이라 적절한 책이 필요해요.", "output": "theme=배려"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "우정 관련된 보드북이나 그림책 추천해주세요.", "output": "theme=우정"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "4-6세세 아이가 흥미로워할 만한 모양 책 추천받고 싶어요.", "output": "theme=모양, age_range=4-6"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "가족 주제의 그림책 책 있을까요?", "output": "theme=가족, type=그림책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "0-2세세 아이에게 맞는 정보책 추천해 주세요.", "output": "type=정보책, age_range=0-2"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "그림책 중에서 2-4세세가 좋아할 만한 책 있을까요?", "output": "type=그림책, age_range=2-4"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "모양 관련된 보드북이나 그림책 추천해주세요.", "output": "theme=모양"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "0-2세세 아이랑 읽기 좋은 가족 책 추천해 주세요.", "output": "theme=가족, age_range=0-2"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 낯가림 심할 때이라 관련 도서 찾고 있어요.", "output": "situation=낯가림 심할 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이에게 동물 개념을 알려줄 좋은 창작동화 없을까요?", "output": "theme=동물, type=창작동화"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "모양 관련된 보드북이나 그림책 추천해주세요.", "output": "theme=모양"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 요즘 계절을 배우는 중이라 적절한 책이 필요해요.", "output": "theme=계절"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "곧 생일인데 그 전에 읽히기 좋은 책 있을까요?", "output": "situation=생일"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "곧 감기 걸렸을 때인데 그 전에 읽히기 좋은 책 있을까요?", "output": "situation=감기 걸렸을 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 요즘 자연을 배우는 중이라 적절한 책이 필요해요.", "output": "theme=자연"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이랑 같이 감기 걸렸을 때 전에 읽을만한 책이 있을까요?", "output": "situation=감기 걸렸을 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "우리 아이가 모양에 관심이 많은데, 어떤 책이 좋을까요?", "output": "theme=모양"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "자존감을 배울 수 있는 책 있으면 알려주세요.", "output": "theme=자존감"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "곧 생일인데 그 전에 읽히기 좋은 책 있을까요?", "output": "situation=생일"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "배려을 배울 수 있는 책 있으면 알려주세요.", "output": "theme=배려"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 모양에 대해 질문이 많아요. 도움이 될 책 있을까요?", "output": "theme=모양"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이랑 같이 외출 전 전에 읽을만한 책이 있을까요?", "output": "situation=외출 전"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "동물을 배울 수 있는 책 있으면 알려주세요.", "output": "theme=동물"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "양치 시간 읽어주기 좋은 책 있을까요?", "output": "situation=양치 시간"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "동생이 생겼을 때 읽어주기 좋은 책 있을까요?", "output": "situation=동생이 생겼을 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "동생이 생겼을 때에 읽기 좋은 놀이책을 찾고 있어요.", "output": "type=놀이책, situation=동생이 생겼을 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "0-2세세 아이가 흥미로워할 만한 배려 책 추천받고 싶어요.", "output": "theme=배려, age_range=0-2"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "우정 관련된 보드북이나 그림책 추천해주세요.", "output": "theme=우정"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 요즘 우정을 배우는 중이라 적절한 책이 필요해요.", "output": "theme=우정"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 자존감에 대해 질문이 많아요. 도움이 될 책 있을까요?", "output": "theme=자존감"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "2-4세세 아이가 흥미로워할 만한 감정 표현 책 추천받고 싶어요.", "output": "theme=감정 표현, age_range=2-4"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "그림책 중에서 배려을 다룬 책이 있을까요?", "output": "theme=배려, type=그림책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "모양 주제의 정보책 책 있을까요?", "output": "theme=모양, type=정보책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이 눈높이에 맞는 놀이책으로 계절을 알려주고 싶어요.", "output": "theme=계절, type=놀이책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이에게 계절 개념을 알려줄 좋은 그림책 없을까요?", "output": "theme=계절, type=그림책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 동생이 생겼을 때이라 관련 도서 찾고 있어요.", "output": "situation=동생이 생겼을 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이 눈높이에 맞는 보드북으로 계절을 알려주고 싶어요.", "output": "theme=계절, type=보드북"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 상상력에 대해 질문이 많아요. 도움이 될 책 있을까요?", "output": "theme=상상력"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 생일이라 관련 도서 찾고 있어요.", "output": "situation=생일"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "2-4세세 아이가 흥미로워할 만한 자존감 책 추천받고 싶어요.", "output": "theme=자존감, age_range=2-4"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "창작동화 중에서 배려을 다룬 책이 있을까요?", "output": "theme=배려, type=창작동화"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 양치 시간이라 관련 도서 찾고 있어요.", "output": "situation=양치 시간"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 동생이 생겼을 때이라 관련 도서 찾고 있어요.", "output": "situation=동생이 생겼을 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이에게 색깔 개념을 알려줄 좋은 놀이책 없을까요?", "output": "theme=색깔, type=놀이책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "자연을 배울 수 있는 책 있으면 알려주세요.", "output": "theme=자연"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "가족 주제의 창작동화 책 있을까요?", "output": "theme=가족, type=창작동화"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 계절에 대해 질문이 많아요. 도움이 될 책 있을까요?", "output": "theme=계절"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이 눈높이에 맞는 창작동화으로 계절을 알려주고 싶어요.", "output": "theme=계절, type=창작동화"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "2-4세세 아이랑 읽기 좋은 모양 책 추천해 주세요.", "output": "theme=모양, age_range=2-4"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "우리 아이가 우정에 관심이 많은데, 어떤 책이 좋을까요?", "output": "theme=우정"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 자존감을 잘 못해서 관련 책이 있을까요?", "output": "theme=자존감"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 양치 시간이라 관련 도서 찾고 있어요.", "output": "situation=양치 시간"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "2-4세세 아이랑 읽기 좋은 우정 책 추천해 주세요.", "output": "theme=우정, age_range=2-4"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "잠자리에 읽기 좋은 보드북을 찾고 있어요.", "output": "type=보드북, situation=잠자리"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "자존감에 대해 자연스럽게 배울 수 있는 책이 궁금해요.", "output": "theme=자존감"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "2-4세세 아이에게 맞는 보드북 추천해 주세요.", "output": "type=보드북, age_range=2-4"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 배려에 대해 질문이 많아요. 도움이 될 책 있을까요?", "output": "theme=배려"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 생일이라 관련 도서 찾고 있어요.", "output": "situation=생일"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 낯가림 심할 때이라 관련 도서 찾고 있어요.", "output": "situation=낯가림 심할 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "잠자리 읽어주기 좋은 책 있을까요?", "output": "situation=잠자리"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이랑 같이 외출 전 전에 읽을만한 책이 있을까요?", "output": "situation=외출 전"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이 눈높이에 맞는 놀이책으로 자연을 알려주고 싶어요.", "output": "theme=자연, type=놀이책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "놀이책 중에서 자연을 다룬 책이 있을까요?", "output": "theme=자연, type=놀이책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "생일에 읽기 좋은 그림책을 찾고 있어요.", "output": "type=그림책, situation=생일"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 외출 전이라 관련 도서 찾고 있어요.", "output": "situation=외출 전"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "0-2세세 아이랑 읽기 좋은 동물 책 추천해 주세요.", "output": "theme=동물, age_range=0-2"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 동생이 생겼을 때이라 관련 도서 찾고 있어요.", "output": "situation=동생이 생겼을 때"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "4-6세세 아이에게 맞는 보드북 추천해 주세요.", "output": "type=보드북, age_range=4-6"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 감정 표현을 잘 못해서 관련 책이 있을까요?", "output": "theme=감정 표현"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 동물을 잘 못해서 관련 책이 있을까요?", "output": "theme=동물"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "2-4세세 아이가 흥미로워할 만한 가족 책 추천받고 싶어요.", "output": "theme=가족, age_range=2-4"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "요즘 아이가 색깔을 잘 못해서 관련 책이 있을까요?", "output": "theme=색깔"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "상상력 주제의 놀이책 책 있을까요?", "output": "theme=상상력, type=놀이책"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "2-4세세 아이가 흥미로워할 만한 모양 책 추천받고 싶어요.", "output": "theme=모양, age_range=2-4"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "아이가 요즘 감정 표현을 배우는 중이라 적절한 책이 필요해요.", "output": "theme=감정 표현"}
+{"instruction": "다음 문장을 분석하여 도서 추천 조건을 추출하세요.", "input": "정보책 중에서 0-2세세가 좋아할 만한 책 있을까요?", "output": "type=정보책, age_range=0-2"}
