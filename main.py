@@ -55,15 +55,16 @@ tokenized = dataset.map(
     remove_columns=["instruction", "input", "output", "text"]
 )
 
-# Trainer 설정
+# Trainer 설정 - OOM 대응 버전
 training_args = TrainingArguments(
     output_dir="./outputs",
-    per_device_train_batch_size=2,
+    per_device_train_batch_size=1,           # 🔽 메모리 줄이기
+    gradient_accumulation_steps=4,           # 🔁 실질적 배치 유지
     num_train_epochs=3,
     logging_dir="./logs",
     logging_steps=10,
     save_strategy="no",
-    bf16=True,
+    fp16=True,                               # ✅ fp16 사용 (bf16 제거)
     remove_unused_columns=False,
     report_to="none"
 )
