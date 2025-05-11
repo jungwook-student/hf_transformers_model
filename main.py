@@ -68,8 +68,7 @@ training_args = TrainingArguments(
 trainer = SFTTrainer(
     model=model,
     train_dataset=dataset,
-    args=training_args,
-    dataset_text_field="text"
+    args=training_args
 )
 
 print("🚀 학습 시작...")
