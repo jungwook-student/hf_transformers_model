@@ -69,7 +69,7 @@ trainer = SFTTrainer(
     model=model,
     train_dataset=dataset,
     args=training_args,
-    tokenizer=tokenizer,
+    dataset_text_field="text"
 )
 
 print("🚀 학습 시작...")
