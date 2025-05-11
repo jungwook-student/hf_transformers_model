@@ -9,7 +9,7 @@ hf_token = os.environ["HF_TOKEN"]
 
 # 토크나이저 및 모델 로딩
 tokenizer = AutoTokenizer.from_pretrained(model_id, token=hf_token, trust_remote_code=True)
-tokenizer.pad_token = tokenizer.eos_token  # ✅ pad_token 명시 설정
+tokenizer.pad_token = tokenizer.eos_token  # ✅ pad_token 명시
 model = AutoModelForCausalLM.from_pretrained(model_id, token=hf_token, device_map="auto", torch_dtype="auto")
 
 # LoRA 설정
@@ -31,9 +31,14 @@ def format(example):
 
 dataset = dataset.map(format)
 
-tokenized = dataset.map(lambda x: tokenizer(x["text"], truncation=True, padding="max_length", max_length=512), batched=True)
+# ✅ tokenizer 후 텍스트 필드 제거
+tokenized = dataset.map(
+    lambda x: tokenizer(x["text"], truncation=True, padding="max_length", max_length=512),
+    batched=True,
+    remove_columns=["text"]
+)
 
-# 학습 인자 설정
+# 학습 인자
 training_args = TrainingArguments(
     output_dir="./outputs",
     per_device_train_batch_size=2,
