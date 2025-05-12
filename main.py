@@ -22,10 +22,10 @@ print("📦 모델 및 토크나이저 로딩 중...")
 tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
 model = AutoModelForCausalLM.from_pretrained(
     model_name,
-    device_map="cuda", # 단일 GPU
     torch_dtype=torch.float16,
     quantization_config=bnb_config
 )
+Model.to("cuda")
 model = prepare_model_for_kbit_training(model)
 
 # ✅ LoRA 설정
