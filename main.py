@@ -22,7 +22,7 @@ print("📦 모델 및 토크나이저 로딩 중...")
 tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
 model = AutoModelForCausalLM.from_pretrained(
     model_name,
-    device_map="auto",  # 다중 GPU 고려
+    device_map="cuda", # 단일 GPU
     torch_dtype=torch.float16,
     quantization_config=bnb_config
 )
@@ -86,7 +86,8 @@ inputs = [
 ]
 for i, sentence in enumerate(inputs, 1):
     prompt = f"### Instruction:\n다음 문장을 분석하여 도서 추천 조건을 추출하세요.\n\n### Input:\n{sentence}\n\n### Output:\n"
-    input_ids = tokenizer(prompt, return_tensors="pt").input_ids.cuda()
+    device = model.device
+    input_ids = tokenizer(prompt, return_tensors="pt").input_ids.to(device)
     with torch.no_grad():
         outputs = model.generate(input_ids=input_ids, max_new_tokens=50, do_sample=False)
     print(f"[예제 {i}]")
