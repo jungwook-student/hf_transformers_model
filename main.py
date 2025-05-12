@@ -62,7 +62,8 @@ training_args = TrainingArguments(
     num_train_epochs=3,
     learning_rate=2e-4,
     fp16=True,
-    save_strategy="no"
+    save_strategy="epoch",
+    save_total_limit=1
 )
 
 trainer = SFTTrainer(
@@ -73,6 +74,7 @@ trainer = SFTTrainer(
 
 print("🚀 학습 시작...")
 trainer.train()
+trainer.save_model("./output")  # 학습 완료 후 직접 저장
 
 # ✅ 예제 문장 테스트
 print("✅ 학습 완료, 예제 문장 테스트 중...")
