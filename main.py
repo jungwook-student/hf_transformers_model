@@ -25,7 +25,7 @@ model = AutoModelForCausalLM.from_pretrained(
     torch_dtype=torch.float16,
     quantization_config=bnb_config
 )
-Model.to("cuda")
+model.to("cuda")
 model = prepare_model_for_kbit_training(model)
 
 # ✅ LoRA 설정
