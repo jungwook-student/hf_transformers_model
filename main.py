@@ -90,10 +90,15 @@ for i, sentence in enumerate(inputs, 1):
     prompt = f"### Instruction:\n다음 문장을 분석하여 도서 추천 조건을 추출하세요.\n\n### Input:\n{sentence}\n\n### Output:\n"
     device = model.device
     input_ids = tokenizer(prompt, return_tensors="pt").input_ids.to(device)
-    with torch.no_grad():
-        outputs = model.generate(input_ids=input_ids, max_new_tokens=50, do_sample=False)
     print(f"[예제 {i}]")
-    print(tokenizer.decode(outputs[0], skip_special_tokens=True))
+    print(" ⏳ generating...")
+    with torch.no_grad():
+        outputs = model.generate(input_ids=input_ids, max_new_tokens=30, do_sample=False)
+    print(" ✅ generation complete.")
+    print(" ⏳ decoding...")
+    decoded = tokenizer.decode(outputs[0].cpu(), skip_special_tokens=True)
+    print(" ✅ decoded.")
+    print(decoded)
     print()
 
 # ✅ 종료 방지
