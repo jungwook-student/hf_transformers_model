@@ -20,6 +20,7 @@ bnb_config = BitsAndBytesConfig(
 
 print("📦 모델 및 토크나이저 로딩 중...", flush=True)
 tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
+tokenizer.pad_token = tokenizer.eos_token
 model = AutoModelForCausalLM.from_pretrained(
     model_name,
     torch_dtype=torch.float16,
