@@ -93,12 +93,27 @@ for i, sentence in enumerate(inputs, 1):
     print(f"[예제 {i}]")
     print(" ⏳ generating...")
     with torch.no_grad():
-        outputs = model.generate(input_ids=input_ids, max_new_tokens=30, do_sample=False)
+        outputs = model.generate(
+            input_ids=input_ids,
+            max_new_tokens=30,
+            do_sample=False,
+            early_stopping=True,
+            eos_token_id=tokenizer.eos_token_id
+        )
     print(" ✅ generation complete.")
+    print(f"output shape: {outputs.shape}")
+    print(f"raw token ids: {outputs[0].tolist()[:20]} ...")
     print(" ⏳ decoding...")
-    decoded = tokenizer.decode(outputs[0].cpu(), skip_special_tokens=True)
-    print(" ✅ decoded.")
-    print(decoded)
+    try:
+        decoded = tokenizer.decode(
+            outputs[0].cpu(),
+            skip_special_tokens=True,
+            clean_up_tokenization_spaces=True
+        )
+        print(" ✅ decoded.")
+        print(decoded)
+    except Exception as e:
+        print("❌ decoding failed:", e)
     print()
 
 # ✅ 종료 방지
