@@ -10,7 +10,7 @@ from transformers import BitsAndBytesConfig
 from trl import SFTTrainer
 
 # ✅ 모델 로딩
-model_name = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
+model_name = "mistralai/Mistral-7B-Instruct-v0.2"
 bnb_config = BitsAndBytesConfig(
     load_in_4bit=True,
     bnb_4bit_compute_dtype=torch.float16,
@@ -45,7 +45,7 @@ print("✅ 모델 로딩 완료", flush=True)
 
 # ✅ 데이터 전처리
 print("📚 데이터셋 로딩 및 전처리 중...", flush=True)
-dataset = load_dataset("json", data_files="data/instruction_data_500.jsonl")["train"]
+dataset = load_dataset("json", data_files="data/instruction_dataset_high_precision_half.jsonl")["train"]
 
 def generate_prompt(example):
     return f"### Instruction:\n{example['instruction']}\n\n### Input:\n{example['input']}\n\n### Output:\n{example['output']}"
@@ -55,7 +55,7 @@ dataset = dataset.map(lambda x: tokenizer(x["text"], truncation=True, padding="m
 
 # ✅ Trainer 설정
 training_args = TrainingArguments(
-    output_dir="./output",
+    output_dir="./output_mistral",
     per_device_train_batch_size=4,
     gradient_accumulation_steps=4,
     logging_steps=1,
@@ -74,7 +74,7 @@ trainer = SFTTrainer(
 
 print("🚀 학습 시작...", flush=True)
 trainer.train()
-trainer.save_model("./output")  # 학습 완료 후 직접 저장
+trainer.save_model("./output_mistral")  # 학습 완료 후 직접 저장
 
 # ✅ 예제 문장 테스트
 print("✅ 학습 완료, 예제 문장 테스트 중...", flush=True)
