@@ -18,7 +18,7 @@ bnb_config = BitsAndBytesConfig(
     bnb_4bit_quant_type="nf4"
 )
 
-print("📦 모델 및 토크나이저 로딩 중...")
+print("📦 모델 및 토크나이저 로딩 중...", flush=True)
 tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
 model = AutoModelForCausalLM.from_pretrained(
     model_name,
@@ -40,11 +40,11 @@ model = get_peft_model(model, peft_config)
 
 print(f"trainable params: {sum(p.numel() for p in model.parameters() if p.requires_grad):,} "
       f"|| all params: {sum(p.numel() for p in model.parameters()):,} "
-      f"|| trainable%: {100 * sum(p.numel() for p in model.parameters() if p.requires_grad) / sum(p.numel() for p in model.parameters()):.4f}")
-print("✅ 모델 로딩 완료")
+      f"|| trainable%: {100 * sum(p.numel() for p in model.parameters() if p.requires_grad) / sum(p.numel() for p in model.parameters()):.4f}", flush=True)
+print("✅ 모델 로딩 완료", flush=True)
 
 # ✅ 데이터 전처리
-print("📚 데이터셋 로딩 및 전처리 중...")
+print("📚 데이터셋 로딩 및 전처리 중...", flush=True)
 dataset = load_dataset("json", data_files="data/instruction_data_500.jsonl")["train"]
 
 def generate_prompt(example):
@@ -72,12 +72,12 @@ trainer = SFTTrainer(
     args=training_args
 )
 
-print("🚀 학습 시작...")
+print("🚀 학습 시작...", flush=True)
 trainer.train()
 trainer.save_model("./output")  # 학습 완료 후 직접 저장
 
 # ✅ 예제 문장 테스트
-print("✅ 학습 완료, 예제 문장 테스트 중...")
+print("✅ 학습 완료, 예제 문장 테스트 중...", flush=True)
 model.eval()
 inputs = [
     "첫 등원에 읽기 좋은 놀이책을 찾고 있어요.",
@@ -90,8 +90,8 @@ for i, sentence in enumerate(inputs, 1):
     prompt = f"### Instruction:\n다음 문장을 분석하여 도서 추천 조건을 추출하세요.\n\n### Input:\n{sentence}\n\n### Output:\n"
     device = model.device
     input_ids = tokenizer(prompt, return_tensors="pt").input_ids.to(device)
-    print(f"[예제 {i}]")
-    print(" ⏳ generating...")
+    print(f"[예제 {i}]", flush=True)
+    print(" ⏳ generating...", flush=True)
     with torch.no_grad():
         outputs = model.generate(
             input_ids=input_ids,
@@ -101,27 +101,40 @@ for i, sentence in enumerate(inputs, 1):
             eos_token_id=tokenizer.eos_token_id,
             return_dict_in_generate=False
         )
-    print(" ✅ generation complete.")
-    print(f"output type: {type(outputs)}")
-    print(f"output repr: {repr(outputs)[:500]}")
-    tokens = outputs[0] if isinstance(outputs, list) else outputs[0]
-    print(f"output shape: {tokens.shape}")
-    print(f"raw token ids: {tokens.tolist()[:20]} ...")
-    print(" ⏳ decoding...")
+    print(" ✅ generation complete.", flush=True)
+    if outputs is None:
+        print("❌ generate() returned None", flush=True)
+        import sys; sys.exit(1)
+
+    print(f"output type: {type(outputs)}", flush=True)
+    try:
+        if isinstance(outputs, torch.Tensor):
+            tokens = outputs[0]
+        elif isinstance(outputs, list) and isinstance(outputs[0], torch.Tensor):
+            tokens = outputs[0]
+        else:
+            raise ValueError(f"Unexpected output type: {type(outputs)}")
+    except Exception as e:
+        print("❌ error while parsing outputs:", e, flush=True)
+        import sys; sys.exit(1)
+
+    print(f"output shape: {tokens.shape}", flush=True)
+    print(f"raw token ids: {tokens.tolist()[:20]} ...", flush=True)
+    print(" ⏳ decoding...", flush=True)
     try:
         decoded = tokenizer.decode(
             tokens.cpu(),
             skip_special_tokens=True,
             clean_up_tokenization_spaces=True
         )
-        print(" ✅ decoded.")
-        print(decoded)
+        print(" ✅ decoded.", flush=True)
+        print(decoded, flush=True)
     except Exception as e:
-        print("❌ decoding failed:", e)
+        print("❌ decoding failed:", e, flush=True)
     print()
 
 # ✅ 종료 방지
-print("🕓 스크립트 종료 방지 중... Ctrl+C 로 종료 가능")
+print("🕓 스크립트 종료 방지 중... Ctrl+C 로 종료 가능", flush=True)
 import time
 while True:
     time.sleep(60)
