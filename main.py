@@ -98,15 +98,19 @@ for i, sentence in enumerate(inputs, 1):
             max_new_tokens=30,
             do_sample=False,
             early_stopping=True,
-            eos_token_id=tokenizer.eos_token_id
+            eos_token_id=tokenizer.eos_token_id,
+            return_dict_in_generate=False
         )
     print(" ✅ generation complete.")
-    print(f"output shape: {outputs.shape}")
-    print(f"raw token ids: {outputs[0].tolist()[:20]} ...")
+    print(f"output type: {type(outputs)}")
+    print(f"output repr: {repr(outputs)[:500]}")
+    tokens = outputs[0] if isinstance(outputs, list) else outputs[0]
+    print(f"output shape: {tokens.shape}")
+    print(f"raw token ids: {tokens.tolist()[:20]} ...")
     print(" ⏳ decoding...")
     try:
         decoded = tokenizer.decode(
-            outputs[0].cpu(),
+            tokens.cpu(),
             skip_special_tokens=True,
             clean_up_tokenization_spaces=True
         )
