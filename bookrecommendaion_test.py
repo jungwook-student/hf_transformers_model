@@ -13,7 +13,8 @@ def load_model():
         "davidkim205/komt-mistral-7b-v1",
         device_map="auto",
         torch_dtype=torch.float16,
-        quantization_config=BitsAndBytesConfig(load_in_4bit=True)
+        quantization_config=BitsAndBytesConfig(load_in_4bit=True),
+        use_safetensors=True
     )
     model = PeftModel.from_pretrained(base, "JungWook0116/ko-mistral7b-v1-book-recommender")
     tokenizer = AutoTokenizer.from_pretrained("davidkim205/komt-mistral-7b-v1")
