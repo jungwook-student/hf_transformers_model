@@ -98,7 +98,7 @@ def recommend_books(input_sentence, books, sbert_model, model, tokenizer, top_k=
         return []
 
     candidate_texts = [
-        f"query: theme={' '.join(b['theme'])}, type={' '.join(b['types'])}, age={b['age']}" for b in candidates
+        f"query: theme={' '.join(t for theme in b['theme'] for t in (theme if isinstance(theme, list) else [theme]))}, type={' '.join(b['types'])}, age={b['age']}" for b in candidates
     ]
     index, _ = build_faiss_index(candidate_texts, sbert_model)
 
