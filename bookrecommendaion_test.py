@@ -6,6 +6,7 @@ from sentence_transformers import SentenceTransformer
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 from peft import PeftModel
 import requests
+import difflib
 
 # 1. 튜닝된 모델 로딩
 def load_model():
@@ -49,17 +50,31 @@ def parse_extracted(text):
             result["age"] = part[len("age="):].strip()
     return result
 
-# 4. 도서 필터링
-def filter_books(books, extracted):
-    def match(book):
+# 4. 도서 스코어링 함수 (확장된 유사도 기준)
+def similarity_score(a, b):
+    return difflib.SequenceMatcher(None, a, b).ratio()
+
+def age_match_score(user_age_str, book_age_str):
+    import re
+    try:
+        user_age = int(re.findall(r'\d+', user_age_str)[0])
+        book_ages = [int(x) for x in re.findall(r'\d+', book_age_str)]
+        return 1.0 if user_age in book_ages else 0.0
+    except:
+        return 0.0
+
+def score_books(books, extracted):
+    results = []
+    for book in books:
         if "theme" not in book or "types" not in book or "age" not in book:
-            return False
-        return (
-            any(t in book["theme"] for t in extracted["theme"])
-            and extracted["type"] in book["types"]
-            and any(a in book["age"] for a in extracted["age"].split("-"))
-        )
-    return [b for b in books if match(b)]
+            continue
+        theme_score = max([similarity_score(t, bt) for t in extracted["theme"] for bt in book["theme"]]) if extracted["theme"] else 0.0
+        type_score = max([similarity_score(extracted["type"], bt) for bt in book["types"]]) if extracted["type"] else 0.0
+        age_score = age_match_score(extracted["age"], book["age"]) if extracted["age"] else 0.0
+        final_score = (theme_score + type_score + age_score) / 3
+        results.append((final_score, book))
+    results.sort(reverse=True, key=lambda x: x[0])
+    return [b for s, b in results if s > 0]
 
 # 5. FAISS 유사도 검색
 def build_faiss_index(texts, model):
@@ -75,8 +90,8 @@ def recommend_books(input_sentence, books, sbert_model, model, tokenizer, top_k=
     
     total_books = len(books)
     print(f"📘 전체 도서 수: {total_books}")
-    candidates = filter_books(books, extracted)
-    print(f"✅ 필터링된 도서 수: {len(candidates)}")
+    candidates = score_books(books, extracted)
+    print(f"✅ 스코어링된 도서 수(점수 > 0): {len(candidates)}")
 
     if not candidates:
         print("❌ 추천할 도서가 없습니다.")
