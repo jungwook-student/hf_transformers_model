@@ -52,6 +52,8 @@ def parse_extracted(text):
 # 4. 도서 필터링
 def filter_books(books, extracted):
     def match(book):
+        if "theme" not in book or "types" not in book or "age" not in book:
+            return False
         return (
             any(t in book["theme"] for t in extracted["theme"])
             and extracted["type"] in book["types"]
@@ -67,11 +69,17 @@ def build_faiss_index(texts, model):
     return index, vectors
 
 def recommend_books(input_sentence, books, sbert_model, model, tokenizer, top_k=5):
-    # 조건 추출
+    print("🧠 조건 추출 중...")
     extracted = extract_conditions(model, tokenizer, input_sentence)
-    candidates = filter_books(books, extracted)
+    print(f"🎯 추출된 조건: {extracted}")
     
+    total_books = len(books)
+    print(f"📘 전체 도서 수: {total_books}")
+    candidates = filter_books(books, extracted)
+    print(f"✅ 필터링된 도서 수: {len(candidates)}")
+
     if not candidates:
+        print("❌ 추천할 도서가 없습니다.")
         return []
 
     candidate_texts = [
@@ -89,6 +97,8 @@ if __name__ == "__main__":
     url = "https://raw.githubusercontent.com/jungwook-student/hf_transformers_model/main/aladin_fully_enriched_upto_now_552.json"
     response = requests.get(url)
     books = json.loads(response.text)
+    missing_theme_count = sum(1 for b in books if "theme" not in b)
+    print(f"🚨 'theme' 필드가 없는 도서 수: {missing_theme_count}")
 
     sbert_model = SentenceTransformer("intfloat/multilingual-e5-base")
     model, tokenizer = load_model()
