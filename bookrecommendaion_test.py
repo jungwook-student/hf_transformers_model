@@ -118,10 +118,13 @@ if __name__ == "__main__":
     sbert_model = SentenceTransformer("intfloat/multilingual-e5-base")
     model, tokenizer = load_model()
 
-    # 테스트 입력
-    user_input = "3세 남자아이에게 읽어줄 창의력을 키워줄 그림책을 추천해줘"
-    results = recommend_books(user_input, books, sbert_model, model, tokenizer, top_k=5)
+    while True:
+        user_input = input("\n📝 추천을 위한 문장을 입력하세요 (종료하려면 'exit'): ")
+        if user_input.strip().lower() == 'exit':
+            print("👋 종료합니다.")
+            break
+        results = recommend_books(user_input, books, sbert_model, model, tokenizer, top_k=5)
 
-    print("\n🔍 추천 도서 결과:")
-    for b in results:
-        print(f"- {b['title']} ({b['age']}, {b['types']})")
+        print("\n🔍 추천 도서 결과:")
+        for b in results:
+            print(f"- {b['title']} ({b['age']}, {b['types']})")
