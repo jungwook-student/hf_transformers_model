@@ -74,11 +74,11 @@ def recommend_books(input_sentence, books, sbert_model, model, tokenizer, top_k=
         return []
 
     candidate_texts = [
-        f"theme={' '.join(b['theme'])}, type={' '.join(b['types'])}, age={b['age']}" for b in candidates
+        f"query: theme={' '.join(b['theme'])}, type={' '.join(b['types'])}, age={b['age']}" for b in candidates
     ]
     index, _ = build_faiss_index(candidate_texts, sbert_model)
 
-    query = f"theme={' '.join(extracted['theme'])}, type={extracted['type']}, age={extracted['age']}"
+    query = f"query: theme={' '.join(extracted['theme'])}, type={extracted['type']}, age={extracted['age']}"
     query_vec = sbert_model.encode([query])
     _, idxs = index.search(query_vec, top_k)
     return [candidates[i] for i in idxs[0]]
@@ -89,7 +89,7 @@ if __name__ == "__main__":
     response = requests.get(url)
     books = json.loads(response.text)
 
-    sbert_model = SentenceTransformer("jhgan/ko-sbert-nli")
+    sbert_model = SentenceTransformer("intfloat/multilingual-e5-base")
     model, tokenizer = load_model()
 
     # 테스트 입력
