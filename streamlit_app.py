@@ -10,7 +10,7 @@ import requests
 def load_models():
     adapter_model_id = "JungWook0116/ko-mistral7b-v1-book-recommender"
     base = AutoModelForCausalLM.from_pretrained(
-        adapter_model_id, torch_dtype=torch.float16, device_map="auto"
+        adapter_model_id, torch_dtype=torch.float16, device_map="auto", use_safetensors=True
     )
     tokenizer = AutoTokenizer.from_pretrained(adapter_model_id)
     sbert = SentenceTransformer("intfloat/multilingual-e5-base")
