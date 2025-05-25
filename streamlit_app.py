@@ -54,10 +54,14 @@ def recommend_books(prompt, model, tokenizer, sbert, books):
 
 # ✅ Streamlit UI 구성
 st.title("📚 유아 도서 추천기")
+
+with st.spinner("초기 로딩 중입니다. 모델과 데이터를 불러오고 있습니다..."):
+    model, tokenizer, sbert = load_models()
+    books = load_books()
+
+st.success("✅ 초기화 완료! 이제 문장을 입력해보세요.")
 user_input = st.text_input("추천을 위한 문장을 입력하세요:")
 
 if user_input:
     with st.spinner("추천 중..."):
-        model, tokenizer, sbert = load_models()
-        books = load_books()
         recommend_books(user_input, model, tokenizer, sbert, books)
