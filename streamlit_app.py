@@ -4,6 +4,7 @@ from sentence_transformers import SentenceTransformer, util
 import torch
 import json
 import requests
+import difflib
 
 # ✅ 모델 로딩
 @st.cache_resource
@@ -21,7 +22,7 @@ def load_models():
 def load_books():
     url = "https://raw.githubusercontent.com/jungwook-student/hf_transformers_model/main/aladin_fully_enriched_upto_now_552.json"
     data = requests.get(url).json()
-    return [book for book in data if "theme" in book and "type" in book and "age" in book]
+    return [book for book in data if "theme" in book and "types" in book and "age" in book]
 
 # ✅ 조건 추출 함수
 def extract_conditions(prompt, model, tokenizer):
@@ -31,11 +32,24 @@ def extract_conditions(prompt, model, tokenizer):
         output = model.generate(input_ids, max_new_tokens=50)
     decoded = tokenizer.decode(output[0], skip_special_tokens=True)
     extracted = decoded.split("### Output:")[-1].strip()
-    return extracted
+    return parse_extracted(extracted)
+
+def parse_extracted(text):
+    result = {"theme": [], "type": None, "age": None}
+    for part in text.split(","):
+        part = part.strip()
+        if part.startswith("theme="):
+            result["theme"] = [t.strip() for t in part[len("theme="):].split()]
+        elif part.startswith("type="):
+            result["type"] = part[len("type="):].strip()
+        elif part.startswith("age="):
+            result["age"] = part[len("age="):].strip()
+    return result
 
 # ✅ 유사도 기반 추천
 def recommend_books(prompt, model, tokenizer, sbert, books, top_k=5):
-    extracted = extract_conditions(prompt, model, tokenizer)
+    extracted_raw = extract_conditions(prompt, model, tokenizer)
+    extracted = extracted_raw
     st.markdown(f"🎯 **추출된 조건**: `{extracted}`")
 
     # 필터링 및 유사도 기반 스코어링
