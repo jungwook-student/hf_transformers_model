@@ -39,11 +39,11 @@ def recommend_books(prompt, model, tokenizer, sbert, books):
     st.markdown(f"🎯 **추출된 조건**: `{extracted}`")
 
     query_emb = sbert.encode(extracted, convert_to_tensor=True)
+    corpus_embs = sbert.encode(texts, convert_to_tensor=True).to(query_emb.device)
     texts = [
         f"theme={' '.join(book['theme'])}, type={' '.join(book['type'])}, age={book['age']}"
         for book in books
     ]
-    corpus_embs = sbert.encode(texts, convert_to_tensor=True)
     scores = util.cos_sim(query_emb, corpus_embs)[0]
     top_k = torch.topk(scores, k=5)
 
