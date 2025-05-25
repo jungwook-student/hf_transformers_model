@@ -34,23 +34,52 @@ def extract_conditions(prompt, model, tokenizer):
     return extracted
 
 # ✅ 유사도 기반 추천
-def recommend_books(prompt, model, tokenizer, sbert, books):
+def recommend_books(prompt, model, tokenizer, sbert, books, top_k=5):
     extracted = extract_conditions(prompt, model, tokenizer)
     st.markdown(f"🎯 **추출된 조건**: `{extracted}`")
 
-    query_emb = sbert.encode(extracted, convert_to_tensor=True)
-    corpus_embs = sbert.encode(texts, convert_to_tensor=True).to(query_emb.device)
-    texts = [
-        f"theme={' '.join(book['theme'])}, type={' '.join(book['type'])}, age={book['age']}"
-        for book in books
+    # 필터링 및 유사도 기반 스코어링
+    candidates = []
+    for book in books:
+        if "theme" not in book or "types" not in book or "age" not in book:
+            continue
+        theme_score = max([difflib.SequenceMatcher(None, t, bt).ratio()
+                          for t in extracted["theme"] for bt in book["theme"]]) if extracted["theme"] else 0.0
+        type_score = max([difflib.SequenceMatcher(None, extracted["type"], bt).ratio()
+                         for bt in book["types"]]) if extracted["type"] else 0.0
+        import re
+        try:
+            user_age = int(re.findall(r'\d+', extracted["age"])[0])
+            book_ages = [int(x) for x in re.findall(r'\d+', book["age"])]
+            age_score = 1.0 if user_age in book_ages else 0.0
+        except:
+            age_score = 0.0
+        final_score = (theme_score + type_score + age_score) / 3
+        if final_score > 0:
+            candidates.append((final_score, book))
+
+    candidates.sort(reverse=True, key=lambda x: x[0])
+    filtered_books = [b for _, b in candidates]
+    st.markdown(f"✅ **스코어링된 도서 수**: {len(filtered_books)}")
+
+    if not filtered_books:
+        st.warning("❌ 추천할 도서가 없습니다.")
+        return
+
+    candidate_texts = [
+        f"query: theme={' '.join(t for theme in b['theme'] for t in (theme if isinstance(theme, list) else [theme]))}, type={' '.join(b['types'])}, age={b['age']}"
+        for b in filtered_books
     ]
-    scores = util.cos_sim(query_emb, corpus_embs)[0]
-    top_k = torch.topk(scores, k=5)
+    query = f"query: theme={' '.join(extracted['theme'])}, type={extracted['type']}, age={extracted['age']}"
+    query_vec = sbert.encode([query], convert_to_tensor=True)
+    corpus_embs = sbert.encode(candidate_texts, convert_to_tensor=True).to(query_vec.device)
+    scores = util.cos_sim(query_vec, corpus_embs)[0]
+    top_k_indices = torch.topk(scores, k=min(top_k, len(filtered_books))).indices.tolist()
 
     st.markdown("🔍 **추천 도서 결과:**")
-    for idx in top_k.indices.tolist():
-        b = books[idx]
-        st.write(f"- **{b['title']}** ({b['age']}, {b['type']})")
+    for idx in top_k_indices:
+        b = filtered_books[idx]
+        st.write(f"- **{b['title']}** ({b['age']}, {b['types']})")
 
 # ✅ Streamlit UI 구성
 st.title("📚 유아 도서 추천기")
