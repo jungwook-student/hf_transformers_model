@@ -7,6 +7,7 @@ import re
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 from sentence_transformers import SentenceTransformer, util
 from peft import PeftModel
+import os
 from huggingface_hub import login
 
 # ✅ 허깅페이스 토큰 로그인
