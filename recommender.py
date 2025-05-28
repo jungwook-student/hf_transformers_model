@@ -7,10 +7,17 @@ import re
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 from sentence_transformers import SentenceTransformer, util
 from peft import PeftModel
+from huggingface_hub import login
+
+# ✅ 허깅페이스 토큰 로그인
+hf_token = os.getenv("HF_TOKEN")
+if hf_token:
+    login(hf_token)
+else:
+    raise ValueError("환경변수 HF_TOKEN이 설정되어 있지 않습니다.")
 
 # ✅ 모델 로딩
 def load_models():
-    print("📦 모델 로딩 중...")
     base = AutoModelForCausalLM.from_pretrained(
         "davidkim205/komt-mistral-7b-v1",
         device_map="auto",
@@ -33,11 +40,16 @@ def extract_conditions(model, tokenizer, sentence: str):
 ### Output:"""
     input_ids = tokenizer(prompt, return_tensors="pt").input_ids.to(model.device)
     with torch.no_grad():
-        outputs = model.generate(input_ids, max_new_tokens=50, do_sample=False, eos_token_id=tokenizer.eos_token_id, pad_token_id=tokenizer.pad_token_id)
+        outputs = model.generate(
+            input_ids,
+            max_new_tokens=50,
+            do_sample=False,
+            pad_token_id=tokenizer.pad_token_id,
+            eos_token_id=tokenizer.eos_token_id
+        )
     decoded = tokenizer.decode(outputs[0], skip_special_tokens=True)
     return parse_extracted(decoded.split("### Output:")[-1].strip())
 
-# ✅ 파싱 함수
 def parse_extracted(text):
     result = {"theme": [], "type": None, "age": None}
     for part in text.split(","):
@@ -50,7 +62,19 @@ def parse_extracted(text):
             result["age"] = part[len("age="):].strip()
     return result
 
-# ✅ 추천 로직
+# ✅ 중첩 테마 리스트 flatten 함수
+def flatten_theme(theme_field):
+    if isinstance(theme_field, list):
+        flat = []
+        for t in theme_field:
+            if isinstance(t, list):
+                flat.extend(t)
+            else:
+                flat.append(t)
+        return flat
+    return [str(theme_field)]
+
+# ✅ 도서 추천
 def recommend_books(input_sentence, books, sbert_model, model, tokenizer, top_k=5):
     print(f"📨 추천 요청 수신: {input_sentence}")
     extracted = extract_conditions(model, tokenizer, input_sentence)
@@ -60,16 +84,15 @@ def recommend_books(input_sentence, books, sbert_model, model, tokenizer, top_k=
     for book in books:
         if "theme" not in book or "types" not in book or "age" not in book:
             continue
-
-        theme_score = max(
-            [difflib.SequenceMatcher(None, t, bt).ratio()
-             for t in extracted["theme"] for bt in book["theme"]]
-        ) if extracted["theme"] else 0.0
-
-        type_score = max(
-            [difflib.SequenceMatcher(None, extracted["type"], bt).ratio()
-             for bt in book["types"]]
-        ) if extracted["type"] else 0.0
+        theme_score = max([
+            difflib.SequenceMatcher(None, t, bt).ratio()
+            for t in extracted["theme"]
+            for bt in flatten_theme(book["theme"])
+        ]) if extracted["theme"] else 0.0
+        type_score = max([
+            difflib.SequenceMatcher(None, extracted["type"], bt).ratio()
+            for bt in book["types"]
+        ]) if extracted["type"] else 0.0
 
         try:
             user_age = int(re.findall(r'\d+', extracted["age"])[0])
@@ -85,23 +108,17 @@ def recommend_books(input_sentence, books, sbert_model, model, tokenizer, top_k=
     candidates.sort(reverse=True, key=lambda x: x[0])
     filtered_books = [b for _, b in candidates]
     print(f"✅ 스코어링된 도서 수: {len(filtered_books)}")
-
     if not filtered_books:
         return []
 
     texts = [
-        f"query: theme={' '.join(b['theme'])}, type={' '.join(b['types'])}, age={b['age']}"
+        f"query: theme={' '.join(flatten_theme(b['theme']))}, type={' '.join(b['types'])}, age={b['age']}"
         for b in filtered_books
     ]
-    query = f"query: theme={' '.join(extracted['theme'])}, type={extracted['type']}, age={extracted['age']}"
-
-    print("🔍 문장 임베딩 및 유사도 계산 중...")
-    query_vec = sbert_model.encode([query], convert_to_tensor=True).cpu()
-    corpus_embs = sbert_model.encode(texts, convert_to_tensor=True).cpu()
-
+    query = f"query: theme={' '.join(flatten_theme(extracted['theme']))}, type={extracted['type']}, age={extracted['age']}"
+    query_vec = sbert_model.encode([query], convert_to_tensor=True)
+    corpus_embs = sbert_model.encode(texts, convert_to_tensor=True).to(query_vec.device)
     scores = util.cos_sim(query_vec, corpus_embs)[0]
     top_indices = torch.topk(scores, k=min(top_k, len(filtered_books))).indices.tolist()
-    top_books = [filtered_books[i] for i in top_indices]
 
-    print(f"📚 추천 완료: {len(top_books)}권")
-    return top_books
+    return [filtered_books[i] for i in top_indices]
