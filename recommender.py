@@ -122,4 +122,12 @@ def recommend_books(input_sentence, books, sbert_model, model, tokenizer, top_k=
     scores = util.cos_sim(query_vec, corpus_embs)[0]
     top_indices = torch.topk(scores, k=min(top_k, len(filtered_books))).indices.tolist()
 
-    return [filtered_books[i] for i in top_indices]
+    result = [filtered_books[i] for i in top_indices]
+    print("📚 최종 추천 도서:")
+    for i in top_indices:
+        book = filtered_books[i]
+        print(f"- 제목: {book.get('title')}")
+        print(f"  테마: {book.get('theme')}")
+        print(f"  유형: {book.get('types')}")
+        print(f"  연령: {book.get('age')}")
+    return result
