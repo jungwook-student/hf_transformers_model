@@ -1,6 +1,7 @@
 import json
 import torch
 import faiss
+import numpy as np
 import requests
 import difflib
 import re
@@ -117,10 +118,12 @@ def recommend_books(input_sentence, books, sbert_model, model, tokenizer, top_k=
         for b in filtered_books
     ]
     query = f"query: theme={' '.join(flatten_theme(extracted['theme']))}, type={extracted['type']}, age={extracted['age']}"
-    query_vec = sbert_model.encode([query], convert_to_tensor=True)
-    corpus_embs = sbert_model.encode(texts, convert_to_tensor=True).to(query_vec.device)
-    scores = util.cos_sim(query_vec, corpus_embs)[0]
-    top_indices = torch.topk(scores, k=min(top_k, len(filtered_books))).indices.tolist()
+    query_vec_np = sbert_model.encode([query], convert_to_numpy=True)
+    corpus_embs_np = sbert_model.encode(texts, convert_to_numpy=True)
+    index = faiss.IndexFlatL2(corpus_embs_np.shape[1])
+    index.add(corpus_embs_np)
+    _, top_indices_np = index.search(query_vec_np, top_k)
+    top_indices = top_indices_np[0].tolist()
 
     result = [filtered_books[i] for i in top_indices]
     print("📚 최종 추천 도서:")
